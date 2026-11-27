@@ -5,7 +5,8 @@ A second implementation, written separately from scripts/check.js and sharing no
 It reads raw/ only. It recomputes the RTP of every payout table with exact fractions, checks each
 revealed server seed against its committed hash, replays every recorded round from the revealed
 seeds, checks each multiplier and gross payout against the captured tables, checks every balance
-move and the wallet session totals, and verifies SHA256SUMS.txt and raw/client/SHA256SUMS.txt.
+move and the wallet session totals, compares the Plinko verifier's tables with the live tables, and
+verifies SHA256SUMS.txt and raw/client/SHA256SUMS.txt.
 It then compares its RTP fractions with analysis/theoretical-rtp.json, written by scripts/check.js.
 
     python3 scripts/independent_check.py
@@ -269,6 +270,26 @@ for p in hash_bad + ['raw/client/' + p for p in client_bad]:
 for p in unlisted:
     problems.append('not in SHA256SUMS.txt: ' + p)
 
+# ---------------------------------------------------------------- the Plinko verifier FortuneJack links (saved from CodePen)
+ver_tables = ver_match = ver_entries = ver_entries_match = 0
+block = re.search(r'const COEFFS = \{(.*?)\n\};', text('raw', 'verifier', 'plinko-WbpZpZE.js'), re.S)
+if block:
+    for m in re.finditer(r'(\d+): \{ low: \[([^\]]*)\], medium: \[([^\]]*)\], high: \[([^\]]*)\] \}', block.group(1)):
+        for risk, values in (('low', m.group(2)), ('medium', m.group(3)), ('high', m.group(4))):
+            vals = [Decimal(x.strip()) for x in values.split(',')]
+            live = PLINKO.get((risk, int(m.group(1))))
+            ok = live is not None and len(live) == len(vals)
+            for i, x in enumerate(vals):
+                ver_entries += 1
+                if live is not None and i < len(live) and live[i] == x:
+                    ver_entries_match += 1
+                else:
+                    ok = False
+            ver_tables += 1
+            ver_match += ok
+expect(ver_tables == 27 and ver_match == 27 and ver_entries == 351 and ver_entries_match == 351,
+       'the Plinko verifier tables differ from the live tables')
+
 # ---------------------------------------------------------------- agreement with scripts/check.js
 agree = compared = 0
 theo_path = os.path.join(ROOT, 'analysis', 'theoretical-rtp.json')
@@ -304,6 +325,8 @@ out('payout positions observed: plinko %d of %d, keno %d of %d'
        sum(1 for o in observed if o[0] == 'keno'), sum(len(v) for v in KENO.values())))
 out('SHA256SUMS.txt: %d/%d files match, %d files not listed; raw/client/SHA256SUMS.txt: %d/%d match'
     % (len(sums) - len(hash_bad), len(sums), len(unlisted), len(client_sums) - len(client_bad), len(client_sums)))
+out('plinko verifier saved from CodePen: %d/%d tables and %d/%d entries equal the live tables'
+    % (ver_match, ver_tables, ver_entries_match, ver_entries))
 out('agreement with scripts/check.js: %d/%d table RTPs identical as exact fractions' % (agree, compared))
 for p in problems:
     out('PROBLEM ' + p)

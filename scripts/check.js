@@ -622,13 +622,57 @@ function verifierLink(claim, file, gameId) {
     note: 'set by the game\'s own configuration (gameId ' + gameId + '), which replaces the default verifier link in the shared client code at startup' }
     : { claim, source: file, game_id: gameId, found: false };
 }
+const PLINKO_VERIFIER = 'raw/verifier/plinko-WbpZpZE.js';
+const KENO_VERIFIER = 'raw/verifier/keno-vExexeO.js';
+const PEN_META = 'raw/verifier/codepen-metadata-2026-11-27.json';
+function verifierTables(claim) {
+  const block = readText(PLINKO_VERIFIER).match(/const COEFFS = \{([\s\S]*?)\n\};/);
+  let tables = 0, tablesMatched = 0, entries = 0, entriesMatched = 0;
+  const mismatched = [];
+  if (block) {
+    for (const m of block[1].matchAll(/(\d+): \{ low: \[([^\]]*)\], medium: \[([^\]]*)\], high: \[([^\]]*)\] \}/g)) {
+      for (const [risk, list] of [['low', m[2]], ['medium', m[3]], ['high', m[4]]]) {
+        tables++;
+        const v = list.split(',').map((x) => x.trim());
+        const t = plinkoTables[risk + '/' + m[1]];
+        let ok = !!t && t.coefficients.length === v.length;
+        v.forEach((x, i) => { entries++; if (t && t.coefficients[i] !== undefined && D(x) === D(t.coefficients[i])) entriesMatched++; else ok = false; });
+        if (ok) tablesMatched++; else mismatched.push(risk + '/' + m[1]);
+      }
+    }
+  }
+  return { claim, source: PLINKO_VERIFIER, compared_with: F.plinkoTables, tables_in_verifier: tables, tables_matched: tablesMatched,
+    entries_in_verifier: entries, entries_matched: entriesMatched, mismatched, found: tables === 27 && tablesMatched === 27 && entries === 351 && entriesMatched === 351 };
+}
+function noPayoutTable(claim, file) {
+  const js = readText(file);
+  const arrays = [...js.matchAll(/\[\s*-?\d+(\.\d+)?(\s*,\s*-?\d+(\.\d+)?){3,}\s*\]/g)].length;
+  return { claim, source: file, numeric_arrays_of_four_or_more: arrays, found: arrays === 0 && !/COEFF|PAYTABLE|PAYOUT|MULTIPLIER/i.test(js) };
+}
+function sameConstruction(claim) {
+  const both = ['crypto.subtle.importKey("raw", enc.encode(seeds.serverSeed), { name: "HMAC", hash: "SHA-512" }', 'enc.encode(seeds.clientSeed + "-" + n)',
+    'Number("0x" + hash.substring(0, 16)) / Number("0xffffffffffffffff")'];
+  const plinko = ['slot += nextInt(2, serverSeed, clientSeed, startNonce + i)'];
+  const keno = ['const NONCES_PER_ROUND = 40;', 'const j = i + nextInt(balls.length - i, serverSeed, clientSeed, nonce);', 'return balls.slice(0, 10)'];
+  const p = readText(PLINKO_VERIFIER), k = readText(KENO_VERIFIER);
+  const missing = [];
+  for (const s of both) { if (!p.includes(s)) missing.push('plinko: ' + s); if (!k.includes(s)) missing.push('keno: ' + s); }
+  for (const s of plinko) if (!p.includes(s)) missing.push('plinko: ' + s);
+  for (const s of keno) if (!k.includes(s)) missing.push('keno: ' + s);
+  return { claim, sources: [PLINKO_VERIFIER, KENO_VERIFIER], code_checked: { both, plinko, keno }, missing, found: missing.length === 0 };
+}
+function penDates(claim) {
+  const p = JSON.parse(readText(PEN_META)).pens.find((x) => x.id === 'WbpZpZE');
+  return { claim, source: PEN_META, created: p ? p.createdAt : null, updated: p ? p.updatedAt : null,
+    found: !!p && p.createdAt.startsWith('2026-10-02') && p.updatedAt.startsWith('2026-10-02') };
+}
 function rulesWithoutReturnFigure(claim, file) {
   const rules = [...readText(file).matchAll(/ruleLine(\d+):"([^"]*)"/g)].map((m) => ({ key: 'ruleLine' + m[1], text: m[2] }));
   const hits = rules.filter((r) => /RTP|return to player|house edge|\d%/i.test(r.text));
   return { claim, source: file, rule_lines: rules.length, rule_lines_with_a_return_figure: hits.map((r) => r.key), found: rules.length > 0 && hits.length === 0 };
 }
 const claims = {
-  note: 'Each entry is located in a captured file of this package: the blog page fetched logged out (text extracted from the saved html) and the public game clients fetched logged out. found = true means the exact text is present.',
+  note: 'Each entry is located in a captured file of this package: the blog page fetched logged out (text extracted from the saved html), the public game clients fetched logged out, and the verifiers the games link to, saved from CodePen. found = true means the exact text is present or the comparison holds.',
   entries: [
     locate('The FortuneJack blog lists Plinko and Keno among the titles on a 99% theoretical RTP', BLOG_TXT, 'Dice, Mines, Plinko, Crash, Keno, Limbo, Hi-Lo, and Baccarat run on a 99% theoretical RTP.'),
     locate('The blog equates 99% RTP with a 1% house edge', BLOG_TXT, 'A 99% RTP corresponds to a 1% theoretical house edge.'),
@@ -637,6 +681,10 @@ const claims = {
     rulesWithoutReturnFigure('The Keno game rules state no RTP or house-edge figure (rules text in the public client)', KENO_JS),
     verifierLink('The FortuneJack Plinko game links this public verifier', PLINKO_JS, 'fj.plinko'),
     verifierLink('The FortuneJack Keno game links this public verifier', KENO_JS, 'fj.keno'),
+    verifierTables('The Plinko verifier the game links holds the same 27 payout tables as the live game'),
+    noPayoutTable('The Keno verifier the game links holds no payout table', KENO_VERIFIER),
+    sameConstruction('Both verifiers compute outcomes the way the replay in this package does'),
+    penDates('CodePen lists the Plinko verifier as created and last updated on 2 October 2026'),
   ],
 };
 

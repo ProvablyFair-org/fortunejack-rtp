@@ -1,5 +1,5 @@
 {
-  "note": "Each entry is located in a captured file of this package: the blog page fetched logged out (text extracted from the saved html) and the public game clients fetched logged out. found = true means the exact text is present.",
+  "note": "Each entry is located in a captured file of this package: the blog page fetched logged out (text extracted from the saved html), the public game clients fetched logged out, and the verifiers the games link to, saved from CodePen. found = true means the exact text is present or the comparison holds.",
   "entries": [
     {
       "claim": "The FortuneJack blog lists Plinko and Keno among the titles on a 99% theoretical RTP",
@@ -51,6 +51,54 @@
       "verifier_url": "https://codepen.io/Orbital-Maintenance/full/vExexeO",
       "found": true,
       "note": "set by the game's own configuration (gameId fj.keno), which replaces the default verifier link in the shared client code at startup"
+    },
+    {
+      "claim": "The Plinko verifier the game links holds the same 27 payout tables as the live game",
+      "source": "raw/verifier/plinko-WbpZpZE.js",
+      "compared_with": "raw/configurations/plinko-coeffs-2026-11-24.txt",
+      "tables_in_verifier": 27,
+      "tables_matched": 27,
+      "entries_in_verifier": 351,
+      "entries_matched": 351,
+      "mismatched": [],
+      "found": true
+    },
+    {
+      "claim": "The Keno verifier the game links holds no payout table",
+      "source": "raw/verifier/keno-vExexeO.js",
+      "numeric_arrays_of_four_or_more": 0,
+      "found": true
+    },
+    {
+      "claim": "Both verifiers compute outcomes the way the replay in this package does",
+      "sources": [
+        "raw/verifier/plinko-WbpZpZE.js",
+        "raw/verifier/keno-vExexeO.js"
+      ],
+      "code_checked": {
+        "both": [
+          "crypto.subtle.importKey(\"raw\", enc.encode(seeds.serverSeed), { name: \"HMAC\", hash: \"SHA-512\" }",
+          "enc.encode(seeds.clientSeed + \"-\" + n)",
+          "Number(\"0x\" + hash.substring(0, 16)) / Number(\"0xffffffffffffffff\")"
+        ],
+        "plinko": [
+          "slot += nextInt(2, serverSeed, clientSeed, startNonce + i)"
+        ],
+        "keno": [
+          "const NONCES_PER_ROUND = 40;",
+          "const j = i + nextInt(balls.length - i, serverSeed, clientSeed, nonce);",
+          "return balls.slice(0, 10)"
+        ]
+      },
+      "missing": [],
+      "found": true
+    },
+    {
+      "claim": "CodePen lists the Plinko verifier as created and last updated on 2 October 2026",
+      "source": "raw/verifier/codepen-metadata-2026-11-27.json",
+      "created": "2026-10-02 07:32:34 UTC",
+      "updated": "2026-10-02 11:46:21 UTC",
+      "found": true
     }
   ]
 }

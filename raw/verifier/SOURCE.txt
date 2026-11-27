@@ -1,0 +1,14 @@
+# FortuneJack's public Plinko and Keno verifiers, saved from codepen.io on 2026-11-27 between 19:23 and 19:27 UTC (not signed in).
+# These are the verifiers FortuneJack's own game configurations link to (see analysis/claims.json):
+#   fj.plinko -> https://codepen.io/Orbital-Maintenance/full/WbpZpZE
+#   fj.keno   -> https://codepen.io/Orbital-Maintenance/full/vExexeO
+# Each file is one code panel of the pen, as served at https://codepen.io/Orbital-Maintenance/pen/<id>.<html|css|js>.
+# The SHA-256 below was computed in the browser on the bytes received; the file here has the same SHA-256.
+# CodePen's own record of each pen (title, owner, created and updated times) is in codepen-metadata-2026-11-27.json.
+# Orbital Maintenance publishes both pens under the MIT licence in LICENSE.txt.
+plinko-WbpZpZE.html  ebb3c0dae1449c22d3ef19458db81e0d9de0bdf61ba58410da4dec4cee9ab840  https://codepen.io/Orbital-Maintenance/pen/WbpZpZE.html
+plinko-WbpZpZE.css   7fd1fc96be9920f1f07bdad67ca04a841af57861ec224a93586f3c7f44b794e1  https://codepen.io/Orbital-Maintenance/pen/WbpZpZE.css
+plinko-WbpZpZE.js    1c860ab8c465316fa7d6e498793831f7ba07983469b857b799c884eb890d8f53  https://codepen.io/Orbital-Maintenance/pen/WbpZpZE.js
+keno-vExexeO.html    b52106dab0dd38eaccff4501963a6947ad8206a185134b8a014068b059c6d578  https://codepen.io/Orbital-Maintenance/pen/vExexeO.html
+keno-vExexeO.css     7fd1fc96be9920f1f07bdad67ca04a841af57861ec224a93586f3c7f44b794e1  https://codepen.io/Orbital-Maintenance/pen/vExexeO.css
+keno-vExexeO.js      13090366c500085d3cfbda6feb617a658a8a9050a4bd137d423dc2ed3e56446b  https://codepen.io/Orbital-Maintenance/pen/vExexeO.js

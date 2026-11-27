@@ -1,0 +1,33 @@
+{
+  "source": "CodePen's details pages (https://codepen.io/Orbital-Maintenance/details/<id>), from the data codepen.io/graphql returned to a browser that was not signed in, read 2026-11-27 between 19:23 and 19:27 UTC. Transcription: fields about the reading session are left out.",
+  "pens": [
+    {
+      "id": "WbpZpZE",
+      "game": "plinko",
+      "url": "https://codepen.io/Orbital-Maintenance/pen/WbpZpZE",
+      "title": "fortunejack - plinko",
+      "description": "Provably fair verifier for FortuneJack Plinko (HMAC-SHA512).",
+      "owner": "Orbital Maintenance (https://codepen.io/Orbital-Maintenance)",
+      "private": false,
+      "fork": false,
+      "createdAt": "2026-10-02 07:32:34 UTC",
+      "updatedAt": "2026-10-02 11:46:21 UTC",
+      "views_when_read": 27,
+      "license": "MIT, Copyright (c) 2026 by Orbital Maintenance (https://codepen.io/Orbital-Maintenance/pen/WbpZpZE)"
+    },
+    {
+      "id": "vExexeO",
+      "game": "keno",
+      "url": "https://codepen.io/Orbital-Maintenance/pen/vExexeO",
+      "title": "fortunejack - keno",
+      "description": "Provably fair verifier for FortuneJack Keno (HMAC-SHA512).",
+      "owner": "Orbital Maintenance (https://codepen.io/Orbital-Maintenance)",
+      "private": false,
+      "fork": false,
+      "createdAt": "2026-10-02 07:31:26 UTC",
+      "updatedAt": "2026-10-02 11:45:35 UTC",
+      "views_when_read": 14,
+      "license": "MIT, Copyright (c) 2026 by Orbital Maintenance (https://codepen.io/Orbital-Maintenance/pen/vExexeO)"
+    }
+  ]
+}

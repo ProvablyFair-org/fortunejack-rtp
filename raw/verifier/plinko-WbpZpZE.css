@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+:root {
+  --frame-bg: #0e1c27;
+  --panel-bg: #162d3f;
+  --stroke: #1e3547;
+  --widget: #1a364c;
+  --widget-hover: #283e62;
+  --main: #e7c146;
+  --main-hover: #f5cf56;
+  --main-text: #080e1c;
+  --text: #f6f6f6;
+  --text-secondary: #92abbf;
+  --win: #10c874;
+  --loss: #e03450;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--frame-bg); color: var(--text); font: 14px/1.4 "Montserrat", system-ui, Helvetica, Arial, sans-serif; }
+.wrapper { max-width: 760px; margin: 24px auto; padding: 24px 20px 32px; background: var(--panel-bg); border: 1px solid var(--stroke); border-radius: 10px; }
+h1 { font-size: 18px; margin: 0 0 16px; }
+.seed { margin-bottom: 12px; }
+label { display: block; font-size: 12px; font-weight: 600; color: var(--text-secondary); margin-bottom: 4px; }
+input, select { width: 100%; padding: 10px 12px; background: var(--frame-bg); color: var(--text); border: 1px solid var(--stroke); border-radius: 6px; font: inherit; font-weight: 600; }
+input:focus, select:focus { outline: none; border-color: var(--main); }
+select:invalid { color: var(--text-secondary); }
+select option { color: var(--text); }
+.missing { border-color: var(--loss); }
+.note.missing-note { color: var(--loss); }
+.row { display: flex; gap: 12px; }
+.row .seed { flex: 1; }
+button { width: 100%; padding: 12px; margin: 4px 0 16px; background: var(--main); color: var(--main-text); border: 0; border-radius: 6px; box-shadow: 0 4px 0 #b8952c; font: inherit; font-weight: 700; cursor: pointer; }
+button:hover { background: var(--main-hover); }
+.hash { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; word-break: break-all; }
+.hash code { color: var(--text); }
+.note { color: var(--text-secondary); font-size: 12px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--stroke); }
+th { color: var(--text-secondary); font-weight: 600; font-size: 12px; }
+td b { color: var(--main); }
+.round { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--stroke); flex-wrap: wrap; }
+.label { min-width: 110px; font-weight: 700; }
+.label small { display: block; font-weight: 500; color: var(--text-secondary); font-size: 11px; }
+.balls, .slots { display: flex; flex-wrap: wrap; gap: 4px; }
+.ball { width: 32px; height: 32px; border-radius: 6px; background: var(--widget); display: grid; place-items: center; font-weight: 700; }
+.ball.hit { background: var(--win); }
+.slot { padding: 4px 6px; border-radius: 4px; background: var(--widget); font-size: 12px; font-weight: 600; }
+.slot.win { background: var(--main); color: var(--main-text); font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(5, 36px); gap: 4px; }
+.grid span { width: 36px; height: 36px; border-radius: 6px; background: var(--widget); display: grid; place-items: center; font-size: 18px; }
+.grid .bomb { background: var(--loss); }
+.cards { display: flex; flex-wrap: wrap; gap: 6px; }
+.card { width: 54px; padding: 6px 0; border-radius: 6px; background: var(--text); color: var(--main-text); text-align: center; font-size: 18px; }
+.card.red { color: var(--loss); }
+.card b { display: block; font-size: 16px; }
+.card small { display: block; font-size: 10px; color: #677; }
