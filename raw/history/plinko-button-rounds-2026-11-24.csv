@@ -1,0 +1,5 @@
+# Plinko, 2 rounds placed with the game's Bet button, 24 Nov 2026 UTC, on the pair whose hash 58c73952... was recorded before the first bet.
+# recorded sent message identical to the scripted one: "64,low,8,0.1"
+# time_utc,path(1=right),balance_after(server),payout,multiplier,stake,bet_id_first8,risk,rows
+23:50:31.898,00001111,40.40529999,0.05,0.5,0.1,827b5a6c,low,8
+23:50:33.554,01000111,40.35529999,0.05,0.5,0.1,7335c094,low,8

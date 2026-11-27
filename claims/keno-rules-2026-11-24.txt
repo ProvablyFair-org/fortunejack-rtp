@@ -1,0 +1,5 @@
+# Keno in-game "Game rules" panel, prod02.orbitalgaming.com/fj/keno/ (FortuneJack, logged in), read 24 Nov 2026 ~21:38 UTC. Game version: 1.0
+# No RTP or house-edge figure in this panel.
+Every draw is provably fair.
+Amounts are rounded to 8 decimal places. Any further digits are ignored. Max win per bet:   [no figure shown]
+Every result can be verified using the server seed, client seed and nonce. The HMAC-SHA512 algorithm ensures each outcome is random and can't be altered.

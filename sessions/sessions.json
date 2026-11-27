@@ -1,0 +1,304 @@
+{
+  "sessions": [
+    {
+      "session_id": "P1",
+      "label": "Plinko main run",
+      "game": "plinko",
+      "account": "one FortuneJack account (pseudonym: account-A); identity withheld",
+      "lobby_url": "https://fortunejack.com/game/origin.plinko",
+      "game_frame_url": "https://prod02.orbitalgaming.com/fj/plinko/",
+      "provider_game_id": "fj.plinko (websocket path wss://prod02.orbitalgaming.com/wsbridge/v1/game/fj.plinko)",
+      "first_round_utc": "2026-11-24T22:13:27.406Z",
+      "last_round_utc": "2026-11-24T22:24:03.757Z",
+      "rounds": 160,
+      "currency": "USDT",
+      "money": "real money (cash wallet debits and credits in the FortuneJack wallet)",
+      "funding_status": "unknown beyond the wallet totals",
+      "mode_and_reward_status": "unknown (no bonus, rakeback or promotion field observed; absence of a field is not evidence it is inactive)",
+      "bets_placed_with": "script in the game tab sending the game's own bet message",
+      "seed_ref": "plinko-A",
+      "source_files": [
+        "raw/events/plinko-main-run-2026-11-24.ndjson"
+      ],
+      "rules_refs": [
+        "claims/plinko-rules-2026-11-24.txt",
+        "claims/plinko-rules-house-edge-1pct-2026-11-24.jpg"
+      ],
+      "claim_refs": [
+        "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.html",
+        "claims/lobby-path-2026-11-25.txt"
+      ],
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:9",
+      "client_version": "raw/client/plinko/assets/index-BvX_ma61.js (fetched 23:54:51 UTC, game version shown: 1.0)"
+    },
+    {
+      "session_id": "K1",
+      "label": "Keno main run",
+      "game": "keno",
+      "account": "one FortuneJack account (pseudonym: account-A); identity withheld",
+      "lobby_url": "https://fortunejack.com/game/origin.keno",
+      "game_frame_url": "https://prod02.orbitalgaming.com/fj/keno/",
+      "provider_game_id": "fj.keno (websocket path wss://prod02.orbitalgaming.com/wsbridge/v1/game/fj.keno)",
+      "first_round_utc": "2026-11-24T22:33:38.825Z",
+      "last_round_utc": "2026-11-24T22:36:23.312Z",
+      "rounds": 160,
+      "currency": "USDT",
+      "money": "real money (cash wallet debits and credits in the FortuneJack wallet)",
+      "funding_status": "unknown beyond the wallet totals",
+      "mode_and_reward_status": "unknown (no bonus, rakeback or promotion field observed; absence of a field is not evidence it is inactive)",
+      "bets_placed_with": "script in the game tab sending the game's own bet message",
+      "seed_ref": "keno-A",
+      "source_files": [
+        "raw/events/keno-main-run-2026-11-24.ndjson"
+      ],
+      "rules_refs": [
+        "claims/keno-rules-2026-11-24.txt",
+        "claims/keno-rules-2026-11-24.jpg"
+      ],
+      "claim_refs": [
+        "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.html",
+        "claims/lobby-path-2026-11-25.txt"
+      ],
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:8",
+      "client_version": "raw/client/keno/assets/index-CbS1RIor.js (fetched 23:54:51 UTC, game version shown: 1.0)"
+    },
+    {
+      "session_id": "K2",
+      "label": "Keno second set",
+      "game": "keno",
+      "account": "one FortuneJack account (pseudonym: account-A); identity withheld",
+      "lobby_url": "https://fortunejack.com/game/origin.keno",
+      "game_frame_url": "https://prod02.orbitalgaming.com/fj/keno/",
+      "provider_game_id": "fj.keno (websocket path wss://prod02.orbitalgaming.com/wsbridge/v1/game/fj.keno)",
+      "first_round_utc": "2026-11-24T23:41:37.849Z",
+      "last_round_utc": "2026-11-24T23:41:56.132Z",
+      "rounds": 20,
+      "currency": "USDT",
+      "money": "real money (cash wallet debits and credits in the FortuneJack wallet)",
+      "funding_status": "unknown beyond the wallet totals",
+      "mode_and_reward_status": "unknown (no bonus, rakeback or promotion field observed; absence of a field is not evidence it is inactive)",
+      "bets_placed_with": "script in the game tab sending the game's own bet message",
+      "seed_ref": "keno-B",
+      "source_files": [
+        "raw/events/keno-second-set-2026-11-24.ndjson"
+      ],
+      "rules_refs": [
+        "claims/keno-rules-2026-11-24.txt",
+        "claims/keno-rules-2026-11-24.jpg"
+      ],
+      "claim_refs": [
+        "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.html",
+        "claims/lobby-path-2026-11-25.txt"
+      ],
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:7",
+      "client_version": "raw/client/keno/assets/index-CbS1RIor.js (fetched 23:54:51 UTC, game version shown: 1.0)"
+    },
+    {
+      "session_id": "P2",
+      "label": "Plinko second set",
+      "game": "plinko",
+      "account": "one FortuneJack account (pseudonym: account-A); identity withheld",
+      "lobby_url": "https://fortunejack.com/game/origin.plinko",
+      "game_frame_url": "https://prod02.orbitalgaming.com/fj/plinko/",
+      "provider_game_id": "fj.plinko (websocket path wss://prod02.orbitalgaming.com/wsbridge/v1/game/fj.plinko)",
+      "first_round_utc": "2026-11-24T23:47:18.923Z",
+      "last_round_utc": "2026-11-24T23:47:35.858Z",
+      "rounds": 20,
+      "currency": "USDT",
+      "money": "real money (cash wallet debits and credits in the FortuneJack wallet)",
+      "funding_status": "unknown beyond the wallet totals",
+      "mode_and_reward_status": "unknown (no bonus, rakeback or promotion field observed; absence of a field is not evidence it is inactive)",
+      "bets_placed_with": "script in the game tab sending the game's own bet message",
+      "seed_ref": "plinko-B",
+      "source_files": [
+        "raw/events/plinko-second-set-2026-11-24.ndjson"
+      ],
+      "rules_refs": [
+        "claims/plinko-rules-2026-11-24.txt",
+        "claims/plinko-rules-house-edge-1pct-2026-11-24.jpg"
+      ],
+      "claim_refs": [
+        "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.html",
+        "claims/lobby-path-2026-11-25.txt"
+      ],
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:6",
+      "client_version": "raw/client/plinko/assets/index-BvX_ma61.js (fetched 23:54:51 UTC, game version shown: 1.0)"
+    },
+    {
+      "session_id": "P3",
+      "label": "Plinko Bet-button rounds",
+      "game": "plinko",
+      "account": "one FortuneJack account (pseudonym: account-A); identity withheld",
+      "lobby_url": "https://fortunejack.com/game/origin.plinko",
+      "game_frame_url": "https://prod02.orbitalgaming.com/fj/plinko/",
+      "provider_game_id": "fj.plinko (websocket path wss://prod02.orbitalgaming.com/wsbridge/v1/game/fj.plinko)",
+      "first_round_utc": "2026-11-24T23:50:31.898Z",
+      "last_round_utc": "2026-11-24T23:50:33.554Z",
+      "rounds": 2,
+      "currency": "USDT",
+      "money": "real money (cash wallet debits and credits in the FortuneJack wallet)",
+      "funding_status": "unknown beyond the wallet totals",
+      "mode_and_reward_status": "unknown (no bonus, rakeback or promotion field observed; absence of a field is not evidence it is inactive)",
+      "bets_placed_with": "the game's Bet button",
+      "seed_ref": "plinko-B",
+      "source_files": [
+        "raw/history/plinko-button-rounds-2026-11-24.csv"
+      ],
+      "rules_refs": [
+        "claims/plinko-rules-2026-11-24.txt",
+        "claims/plinko-rules-house-edge-1pct-2026-11-24.jpg"
+      ],
+      "claim_refs": [
+        "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.html",
+        "claims/lobby-path-2026-11-25.txt"
+      ],
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:5",
+      "client_version": "raw/client/plinko/assets/index-BvX_ma61.js (fetched 23:54:51 UTC, game version shown: 1.0)"
+    },
+    {
+      "session_id": "K3",
+      "label": "Keno Bet-button rounds",
+      "game": "keno",
+      "account": "one FortuneJack account (pseudonym: account-A); identity withheld",
+      "lobby_url": "https://fortunejack.com/game/origin.keno",
+      "game_frame_url": "https://prod02.orbitalgaming.com/fj/keno/",
+      "provider_game_id": "fj.keno (websocket path wss://prod02.orbitalgaming.com/wsbridge/v1/game/fj.keno)",
+      "first_round_utc": "2026-11-24T23:53:04Z",
+      "last_round_utc": "2026-11-24T23:53:07Z",
+      "rounds": 2,
+      "currency": "USDT",
+      "money": "real money (cash wallet debits and credits in the FortuneJack wallet)",
+      "funding_status": "unknown beyond the wallet totals",
+      "mode_and_reward_status": "unknown (no bonus, rakeback or promotion field observed; absence of a field is not evidence it is inactive)",
+      "bets_placed_with": "the game's Bet button",
+      "seed_ref": "keno-C",
+      "source_files": [
+        "raw/history/keno-button-rounds-2026-11-24.csv"
+      ],
+      "rules_refs": [
+        "claims/keno-rules-2026-11-24.txt",
+        "claims/keno-rules-2026-11-24.jpg"
+      ],
+      "claim_refs": [
+        "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.html",
+        "claims/lobby-path-2026-11-25.txt"
+      ],
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:4",
+      "client_version": "raw/client/keno/assets/index-CbS1RIor.js (fetched 23:54:51 UTC, game version shown: 1.0)"
+    }
+  ],
+  "wallet_sessions": [
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:4",
+      "game": "keno",
+      "window_utc": "23:51-23:53",
+      "won": "0",
+      "bet": "0.2",
+      "label": "2 Keno button rounds",
+      "session_ids": [
+        "K3"
+      ],
+      "recorded_rounds": 2,
+      "recorded_won": "0",
+      "recorded_bet": "0.2",
+      "status": "matched"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:5",
+      "game": "plinko",
+      "window_utc": "23:48-23:50",
+      "won": "0.1",
+      "bet": "0.2",
+      "label": "2 Plinko button rounds",
+      "session_ids": [
+        "P3"
+      ],
+      "recorded_rounds": 2,
+      "recorded_won": "0.1",
+      "recorded_bet": "0.2",
+      "status": "matched"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:6",
+      "game": "plinko",
+      "window_utc": "23:44-23:47",
+      "won": "1.93",
+      "bet": "2",
+      "label": "Plinko second set (20)",
+      "session_ids": [
+        "P2"
+      ],
+      "recorded_rounds": 20,
+      "recorded_won": "1.93",
+      "recorded_bet": "2",
+      "status": "matched"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:7",
+      "game": "keno",
+      "window_utc": "23:35-23:41",
+      "won": "2.296",
+      "bet": "2",
+      "label": "Keno second set (20)",
+      "session_ids": [
+        "K2"
+      ],
+      "recorded_rounds": 20,
+      "recorded_won": "2.296",
+      "recorded_bet": "2",
+      "status": "matched"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:8",
+      "game": "keno",
+      "window_utc": "22:30-22:36",
+      "won": "13.66399999",
+      "bet": "16",
+      "label": "Keno main run (160)",
+      "session_ids": [
+        "K1"
+      ],
+      "recorded_rounds": 160,
+      "recorded_won": "13.66399999",
+      "recorded_bet": "16",
+      "status": "matched"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:9",
+      "game": "plinko",
+      "window_utc": "22:06-22:24",
+      "won": "13.16",
+      "bet": "16",
+      "label": "Plinko main run (160)",
+      "session_ids": [
+        "P1"
+      ],
+      "recorded_rounds": 160,
+      "recorded_won": "13.16",
+      "recorded_bet": "16",
+      "status": "matched"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:10",
+      "game": "keno",
+      "window_utc": "20:16-20:17",
+      "won": "0.753",
+      "bet": "0.5",
+      "label": "5 Keno test rounds placed before recording started (outcomes not recorded)",
+      "session_ids": [],
+      "recorded_rounds": 0,
+      "status": "unverifiable"
+    },
+    {
+      "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:11",
+      "game": "plinko",
+      "window_utc": "20:15-20:16",
+      "won": "0.47",
+      "bet": "0.5",
+      "label": "5 Plinko test rounds placed before recording started (outcomes not recorded)",
+      "session_ids": [],
+      "recorded_rounds": 0,
+      "status": "unverifiable"
+    }
+  ]
+}

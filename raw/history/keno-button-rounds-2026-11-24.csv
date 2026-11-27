@@ -1,0 +1,5 @@
+# Keno, 2 rounds placed with the game's Bet button, 24 Nov 2026 UTC, on the pair whose hash 3cf364c4... was recorded before the first bet.
+# sent (both): {"service":"bet","data":{"amount":"0.1","selected":[1],"risk":"default"}}  (identical to the scripted bet message)
+# idx,time_utc,risk(d=default),picks(selected = 1..picks),drawn(10 numbers, one char each: 0-9a-zA-E = 0..40, draw order),hits,win_mult,win_amount,bet_amount,balance,round_id
+0,23:53:04,d,1,beioB3DEa6,0,0,0,0.1,40.25529999,1795564384397294
+1,23:53:07,d,1,zcw6D3isCp,0,0,0,0.1,40.15529999,1795564387480115

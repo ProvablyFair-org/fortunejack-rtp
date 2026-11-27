@@ -1,0 +1,11 @@
+# FortuneJack account wallet, "Transactions" > Games, read logged in 25 Nov 2026 ~01:15 UTC. Per game session: total won / total bet. Session times converted to UTC (all on 24 Nov 2026).
+# The screenshot of this list is withheld from the shared copy because it shows the account id.
+# Text after " = " is our label for the session.
+Keno   23:51-23:53  won 0 USDT            bet -0.2 USDT   = 2 Keno button rounds
+Plinko 23:48-23:50  won 0.1 USDT          bet -0.2 USDT   = 2 Plinko button rounds
+Plinko 23:44-23:47  won 1.93 USDT         bet -2 USDT     = Plinko second set (20)
+Keno   23:35-23:41  won 2.296 USDT        bet -2 USDT     = Keno second set (20)
+Keno   22:30-22:36  won 13.66399999 USDT  bet -16 USDT    = Keno main run (160)
+Plinko 22:06-22:24  won 13.16 USDT        bet -16 USDT    = Plinko main run (160)
+Keno   20:16-20:17  won 0.753 USDT        bet -0.5 USDT   = 5 Keno test rounds placed before recording started (outcomes not recorded)
+Plinko 20:15-20:16  won 0.47 USDT         bet -0.5 USDT   = 5 Plinko test rounds placed before recording started (outcomes not recorded)

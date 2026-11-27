@@ -1,0 +1,1449 @@
+{
+  "method": {
+    "plinko": "RTP = sum over k of C(n,k) x m[k] / 2^n, n = rows, m = coefficient array (index = number of right steps), each step right with probability 1/2. Exact rational arithmetic.",
+    "keno": "RTP = sum over h of C(s,h) x C(40-s,10-h) / C(40,10) x m[h], s = numbers picked, h = hits, 10 of 40 drawn uniformly. Exact rational arithmetic.",
+    "assumptions": "Disclosed outcome model only. No payout cap, fee, bonus or promotion applied (none was evidenced; max win per bet displayed no figure). Rounding to 8 decimal places is a per-bet settlement rule and is not applied to the theoretical value."
+  },
+  "plinko": [
+    {
+      "setting": "plinko/Low/8",
+      "risk": "Low",
+      "rows": 8,
+      "coefficients": [
+        "5.5",
+        "1.8",
+        "1.1",
+        "1",
+        "0.5",
+        "1",
+        "1.1",
+        "1.8",
+        "5.5"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:3",
+      "rtp_fraction": "621/640",
+      "rtp_percent_exact": "97.03125",
+      "rtp_percent_6dp": "97.031250",
+      "house_edge_percent_6dp": "2.968750"
+    },
+    {
+      "setting": "plinko/Low/9",
+      "risk": "Low",
+      "rows": 9,
+      "coefficients": [
+        "5.5",
+        "2.2",
+        "1.3",
+        "1.2",
+        "0.6",
+        "0.6",
+        "1.2",
+        "1.3",
+        "2.2",
+        "5.5"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:4",
+      "rtp_fraction": "497/512",
+      "rtp_percent_exact": "97.0703125",
+      "rtp_percent_6dp": "97.070313",
+      "house_edge_percent_6dp": "2.929688"
+    },
+    {
+      "setting": "plinko/Low/10",
+      "risk": "Low",
+      "rows": 10,
+      "coefficients": [
+        "8.9",
+        "3.3",
+        "1.3",
+        "1.1",
+        "0.9",
+        "0.6",
+        "0.9",
+        "1.1",
+        "1.3",
+        "3.3",
+        "8.9"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:5",
+      "rtp_fraction": "497/512",
+      "rtp_percent_exact": "97.0703125",
+      "rtp_percent_6dp": "97.070313",
+      "house_edge_percent_6dp": "2.929688"
+    },
+    {
+      "setting": "plinko/Low/11",
+      "risk": "Low",
+      "rows": 11,
+      "coefficients": [
+        "9",
+        "3.1",
+        "1.8",
+        "1.2",
+        "1",
+        "0.7",
+        "0.7",
+        "1",
+        "1.2",
+        "1.8",
+        "3.1",
+        "9"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:6",
+      "rtp_fraction": "1987/2048",
+      "rtp_percent_exact": "97.021484375",
+      "rtp_percent_6dp": "97.021484",
+      "house_edge_percent_6dp": "2.978516"
+    },
+    {
+      "setting": "plinko/Low/12",
+      "risk": "Low",
+      "rows": 12,
+      "coefficients": [
+        "10",
+        "3.3",
+        "1.6",
+        "1.2",
+        "1.1",
+        "1",
+        "0.5",
+        "1",
+        "1.1",
+        "1.2",
+        "1.6",
+        "3.3",
+        "10"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:7",
+      "rtp_fraction": "19867/20480",
+      "rtp_percent_exact": "97.0068359375",
+      "rtp_percent_6dp": "97.006836",
+      "house_edge_percent_6dp": "2.993164"
+    },
+    {
+      "setting": "plinko/Low/13",
+      "risk": "Low",
+      "rows": 13,
+      "coefficients": [
+        "8.1",
+        "4",
+        "2.9",
+        "1.9",
+        "1.1",
+        "0.9",
+        "0.7",
+        "0.7",
+        "0.9",
+        "1.1",
+        "1.9",
+        "2.9",
+        "4",
+        "8.1"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:8",
+      "rtp_fraction": "39757/40960",
+      "rtp_percent_exact": "97.06298828125",
+      "rtp_percent_6dp": "97.062988",
+      "house_edge_percent_6dp": "2.937012"
+    },
+    {
+      "setting": "plinko/Low/14",
+      "risk": "Low",
+      "rows": 14,
+      "coefficients": [
+        "7.1",
+        "4",
+        "1.6",
+        "1.3",
+        "1.2",
+        "1.1",
+        "1",
+        "0.5",
+        "1",
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.6",
+        "4",
+        "7.1"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:9",
+      "rtp_fraction": "79463/81920",
+      "rtp_percent_exact": "97.000732421875",
+      "rtp_percent_6dp": "97.000732",
+      "house_edge_percent_6dp": "2.999268"
+    },
+    {
+      "setting": "plinko/Low/15",
+      "risk": "Low",
+      "rows": 15,
+      "coefficients": [
+        "15",
+        "7",
+        "1.9",
+        "1.6",
+        "1.5",
+        "1.1",
+        "1",
+        "0.7",
+        "0.7",
+        "1",
+        "1.1",
+        "1.5",
+        "1.6",
+        "1.9",
+        "7",
+        "15"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:10",
+      "rtp_fraction": "79539/81920",
+      "rtp_percent_exact": "97.093505859375",
+      "rtp_percent_6dp": "97.093506",
+      "house_edge_percent_6dp": "2.906494"
+    },
+    {
+      "setting": "plinko/Low/16",
+      "risk": "Low",
+      "rows": 16,
+      "coefficients": [
+        "16",
+        "8",
+        "3",
+        "1.8",
+        "1.3",
+        "1.2",
+        "1",
+        "1",
+        "0.5",
+        "1",
+        "1",
+        "1.2",
+        "1.3",
+        "1.8",
+        "3",
+        "8",
+        "16"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:11",
+      "rtp_fraction": "317851/327680",
+      "rtp_percent_exact": "97.00042724609375",
+      "rtp_percent_6dp": "97.000427",
+      "house_edge_percent_6dp": "2.999573"
+    },
+    {
+      "setting": "plinko/Medium/8",
+      "risk": "Medium",
+      "rows": 8,
+      "coefficients": [
+        "14",
+        "3.2",
+        "1.2",
+        "0.6",
+        "0.5",
+        "0.6",
+        "1.2",
+        "3.2",
+        "14"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:3",
+      "rtp_fraction": "1243/1280",
+      "rtp_percent_exact": "97.109375",
+      "rtp_percent_6dp": "97.109375",
+      "house_edge_percent_6dp": "2.890625"
+    },
+    {
+      "setting": "plinko/Medium/9",
+      "risk": "Medium",
+      "rows": 9,
+      "coefficients": [
+        "20",
+        "3.6",
+        "1.6",
+        "0.9",
+        "0.5",
+        "0.5",
+        "0.9",
+        "1.6",
+        "3.6",
+        "20"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:4",
+      "rtp_fraction": "1243/1280",
+      "rtp_percent_exact": "97.109375",
+      "rtp_percent_6dp": "97.109375",
+      "house_edge_percent_6dp": "2.890625"
+    },
+    {
+      "setting": "plinko/Medium/10",
+      "risk": "Medium",
+      "rows": 10,
+      "coefficients": [
+        "22",
+        "4",
+        "2",
+        "1.4",
+        "0.6",
+        "0.4",
+        "0.6",
+        "1.4",
+        "2",
+        "4",
+        "22"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:5",
+      "rtp_fraction": "1241/1280",
+      "rtp_percent_exact": "96.953125",
+      "rtp_percent_6dp": "96.953125",
+      "house_edge_percent_6dp": "3.046875"
+    },
+    {
+      "setting": "plinko/Medium/11",
+      "risk": "Medium",
+      "rows": 11,
+      "coefficients": [
+        "24",
+        "6.1",
+        "2.9",
+        "1.7",
+        "0.7",
+        "0.5",
+        "0.5",
+        "0.7",
+        "1.7",
+        "2.9",
+        "6.1",
+        "24"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:6",
+      "rtp_fraction": "9931/10240",
+      "rtp_percent_exact": "96.982421875",
+      "rtp_percent_6dp": "96.982422",
+      "house_edge_percent_6dp": "3.017578"
+    },
+    {
+      "setting": "plinko/Medium/12",
+      "risk": "Medium",
+      "rows": 12,
+      "coefficients": [
+        "33",
+        "9.4",
+        "3.7",
+        "2",
+        "1.1",
+        "0.6",
+        "0.3",
+        "0.6",
+        "1.1",
+        "2",
+        "3.7",
+        "9.4",
+        "33"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:7",
+      "rtp_fraction": "19883/20480",
+      "rtp_percent_exact": "97.0849609375",
+      "rtp_percent_6dp": "97.084961",
+      "house_edge_percent_6dp": "2.915039"
+    },
+    {
+      "setting": "plinko/Medium/13",
+      "risk": "Medium",
+      "rows": 13,
+      "coefficients": [
+        "43",
+        "13",
+        "5",
+        "3",
+        "1.3",
+        "0.7",
+        "0.4",
+        "0.4",
+        "0.7",
+        "1.3",
+        "3",
+        "5",
+        "13",
+        "43"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:8",
+      "rtp_fraction": "4971/5120",
+      "rtp_percent_exact": "97.08984375",
+      "rtp_percent_6dp": "97.089844",
+      "house_edge_percent_6dp": "2.910156"
+    },
+    {
+      "setting": "plinko/Medium/14",
+      "risk": "Medium",
+      "rows": 14,
+      "coefficients": [
+        "65",
+        "16",
+        "5",
+        "4",
+        "1.9",
+        "1",
+        "0.5",
+        "0.2",
+        "0.5",
+        "1",
+        "1.9",
+        "4",
+        "5",
+        "16",
+        "65"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:9",
+      "rtp_fraction": "39743/40960",
+      "rtp_percent_exact": "97.02880859375",
+      "rtp_percent_6dp": "97.028809",
+      "house_edge_percent_6dp": "2.971191"
+    },
+    {
+      "setting": "plinko/Medium/15",
+      "risk": "Medium",
+      "rows": 15,
+      "coefficients": [
+        "88",
+        "18",
+        "9.3",
+        "4.7",
+        "3",
+        "1.3",
+        "0.5",
+        "0.3",
+        "0.3",
+        "0.5",
+        "1.3",
+        "3",
+        "4.7",
+        "9.3",
+        "18",
+        "88"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:10",
+      "rtp_fraction": "159049/163840",
+      "rtp_percent_exact": "97.0758056640625",
+      "rtp_percent_6dp": "97.075806",
+      "house_edge_percent_6dp": "2.924194"
+    },
+    {
+      "setting": "plinko/Medium/16",
+      "risk": "Medium",
+      "rows": 16,
+      "coefficients": [
+        "110",
+        "35",
+        "7.8",
+        "4.5",
+        "3",
+        "1.5",
+        "1",
+        "0.5",
+        "0.3",
+        "0.5",
+        "1",
+        "1.5",
+        "3",
+        "4.5",
+        "7.8",
+        "35",
+        "110"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:11",
+      "rtp_fraction": "63593/65536",
+      "rtp_percent_exact": "97.03521728515625",
+      "rtp_percent_6dp": "97.035217",
+      "house_edge_percent_6dp": "2.964783"
+    },
+    {
+      "setting": "plinko/High/8",
+      "risk": "High",
+      "rows": 8,
+      "coefficients": [
+        "30",
+        "3.9",
+        "1.4",
+        "0.3",
+        "0.2",
+        "0.3",
+        "1.4",
+        "3.9",
+        "30"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:3",
+      "rtp_fraction": "621/640",
+      "rtp_percent_exact": "97.03125",
+      "rtp_percent_6dp": "97.031250",
+      "house_edge_percent_6dp": "2.968750"
+    },
+    {
+      "setting": "plinko/High/9",
+      "risk": "High",
+      "rows": 9,
+      "coefficients": [
+        "43",
+        "6.4",
+        "2",
+        "0.6",
+        "0.2",
+        "0.2",
+        "0.6",
+        "2",
+        "6.4",
+        "43"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:4",
+      "rtp_fraction": "1241/1280",
+      "rtp_percent_exact": "96.953125",
+      "rtp_percent_6dp": "96.953125",
+      "house_edge_percent_6dp": "3.046875"
+    },
+    {
+      "setting": "plinko/High/10",
+      "risk": "High",
+      "rows": 10,
+      "coefficients": [
+        "75",
+        "9",
+        "3",
+        "0.9",
+        "0.3",
+        "0.2",
+        "0.3",
+        "0.9",
+        "3",
+        "9",
+        "75"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:5",
+      "rtp_fraction": "2481/2560",
+      "rtp_percent_exact": "96.9140625",
+      "rtp_percent_6dp": "96.914063",
+      "house_edge_percent_6dp": "3.085938"
+    },
+    {
+      "setting": "plinko/High/11",
+      "risk": "High",
+      "rows": 11,
+      "coefficients": [
+        "120",
+        "13",
+        "5",
+        "1.4",
+        "0.4",
+        "0.2",
+        "0.2",
+        "0.4",
+        "1.4",
+        "5",
+        "13",
+        "120"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:6",
+      "rtp_fraction": "4967/5120",
+      "rtp_percent_exact": "97.01171875",
+      "rtp_percent_6dp": "97.011719",
+      "house_edge_percent_6dp": "2.988281"
+    },
+    {
+      "setting": "plinko/High/12",
+      "risk": "High",
+      "rows": 12,
+      "coefficients": [
+        "170",
+        "21",
+        "8",
+        "2",
+        "0.7",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.7",
+        "2",
+        "8",
+        "21",
+        "170"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:7",
+      "rtp_fraction": "19873/20480",
+      "rtp_percent_exact": "97.0361328125",
+      "rtp_percent_6dp": "97.036133",
+      "house_edge_percent_6dp": "2.963867"
+    },
+    {
+      "setting": "plinko/High/13",
+      "risk": "High",
+      "rows": 13,
+      "coefficients": [
+        "255",
+        "37",
+        "10",
+        "4",
+        "1",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "1",
+        "4",
+        "10",
+        "37",
+        "255"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:8",
+      "rtp_fraction": "9939/10240",
+      "rtp_percent_exact": "97.060546875",
+      "rtp_percent_6dp": "97.060547",
+      "house_edge_percent_6dp": "2.939453"
+    },
+    {
+      "setting": "plinko/High/14",
+      "risk": "High",
+      "rows": 14,
+      "coefficients": [
+        "420",
+        "58",
+        "18",
+        "4.5",
+        "1.9",
+        "0.3",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.3",
+        "1.9",
+        "4.5",
+        "18",
+        "58",
+        "420"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:9",
+      "rtp_fraction": "79543/81920",
+      "rtp_percent_exact": "97.098388671875",
+      "rtp_percent_6dp": "97.098389",
+      "house_edge_percent_6dp": "2.901611"
+    },
+    {
+      "setting": "plinko/High/15",
+      "risk": "High",
+      "rows": 15,
+      "coefficients": [
+        "620",
+        "83",
+        "27",
+        "7.3",
+        "3",
+        "0.5",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.5",
+        "3",
+        "7.3",
+        "27",
+        "83",
+        "620"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:10",
+      "rtp_fraction": "7953/8192",
+      "rtp_percent_exact": "97.08251953125",
+      "rtp_percent_6dp": "97.082520",
+      "house_edge_percent_6dp": "2.917480"
+    },
+    {
+      "setting": "plinko/High/16",
+      "risk": "High",
+      "rows": 16,
+      "coefficients": [
+        "1000",
+        "130",
+        "25",
+        "8",
+        "4",
+        "2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "0.2",
+        "2",
+        "4",
+        "8",
+        "25",
+        "130",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/plinko-coeffs-2026-11-24.txt:11",
+      "rtp_fraction": "158763/163840",
+      "rtp_percent_exact": "96.9012451171875",
+      "rtp_percent_6dp": "96.901245",
+      "house_edge_percent_6dp": "3.098755"
+    }
+  ],
+  "keno": [
+    {
+      "setting": "keno/Classic/1",
+      "risk": "Classic",
+      "picks": 1,
+      "multipliers": [
+        "0",
+        "3.88"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:4",
+      "rtp_fraction": "97/100",
+      "rtp_percent_6dp": "97.000000",
+      "house_edge_percent_6dp": "3.000000"
+    },
+    {
+      "setting": "keno/Classic/2",
+      "risk": "Classic",
+      "picks": 2,
+      "multipliers": [
+        "0",
+        "1.85",
+        "4.47"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:5",
+      "rtp_fraction": "5041/5200",
+      "rtp_percent_6dp": "96.942308",
+      "house_edge_percent_6dp": "3.057692"
+    },
+    {
+      "setting": "keno/Classic/3",
+      "risk": "Classic",
+      "picks": 3,
+      "multipliers": [
+        "0",
+        "1",
+        "2.95",
+        "10.4"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:6",
+      "rtp_fraction": "19161/19760",
+      "rtp_percent_6dp": "96.968623",
+      "house_edge_percent_6dp": "3.031377"
+    },
+    {
+      "setting": "keno/Classic/4",
+      "risk": "Classic",
+      "picks": 4,
+      "multipliers": [
+        "0",
+        "0.75",
+        "1.81",
+        "5",
+        "22.5"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:7",
+      "rtp_fraction": "9579/9880",
+      "rtp_percent_6dp": "96.953441",
+      "house_edge_percent_6dp": "3.046559"
+    },
+    {
+      "setting": "keno/Classic/5",
+      "risk": "Classic",
+      "picks": 5,
+      "multipliers": [
+        "0",
+        "0.25",
+        "1.33",
+        "4.1",
+        "16.5",
+        "36"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:8",
+      "rtp_fraction": "141899/146224",
+      "rtp_percent_6dp": "97.042209",
+      "house_edge_percent_6dp": "2.957791"
+    },
+    {
+      "setting": "keno/Classic/6",
+      "risk": "Classic",
+      "picks": 6,
+      "multipliers": [
+        "0",
+        "0",
+        "0.94",
+        "3.68",
+        "7",
+        "16.5",
+        "40"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:9",
+      "rtp_fraction": "70947/73112",
+      "rtp_percent_6dp": "97.038790",
+      "house_edge_percent_6dp": "2.961210"
+    },
+    {
+      "setting": "keno/Classic/7",
+      "risk": "Classic",
+      "picks": 7,
+      "multipliers": [
+        "0",
+        "0",
+        "0.4",
+        "3.02",
+        "4.5",
+        "14",
+        "31",
+        "60"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:10",
+      "rtp_fraction": "150588/155363",
+      "rtp_percent_6dp": "96.926553",
+      "house_edge_percent_6dp": "3.073447"
+    },
+    {
+      "setting": "keno/Classic/8",
+      "risk": "Classic",
+      "picks": 8,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "2.11",
+        "4",
+        "13",
+        "22",
+        "55",
+        "70"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:11",
+      "rtp_fraction": "3188638/3286525",
+      "rtp_percent_6dp": "97.021565",
+      "house_edge_percent_6dp": "2.978435"
+    },
+    {
+      "setting": "keno/Classic/9",
+      "risk": "Classic",
+      "picks": 9,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "1.46",
+        "3",
+        "8",
+        "16",
+        "44",
+        "60",
+        "85"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:12",
+      "rtp_fraction": "2039053/2103376",
+      "rtp_percent_6dp": "96.941916",
+      "house_edge_percent_6dp": "3.058084"
+    },
+    {
+      "setting": "keno/Classic/10",
+      "risk": "Classic",
+      "picks": 10,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "1.33",
+        "2.25",
+        "4.5",
+        "8",
+        "17",
+        "50",
+        "80",
+        "100"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:13",
+      "rtp_fraction": "53058053/54687776",
+      "rtp_percent_6dp": "97.019950",
+      "house_edge_percent_6dp": "2.980050"
+    },
+    {
+      "setting": "keno/Low/1",
+      "risk": "Low",
+      "picks": 1,
+      "multipliers": [
+        "0.7",
+        "1.78"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:14",
+      "rtp_fraction": "97/100",
+      "rtp_percent_6dp": "97.000000",
+      "house_edge_percent_6dp": "3.000000"
+    },
+    {
+      "setting": "keno/Low/2",
+      "risk": "Low",
+      "picks": 2,
+      "multipliers": [
+        "0",
+        "1.95",
+        "3.81"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:15",
+      "rtp_fraction": "5043/5200",
+      "rtp_percent_6dp": "96.980769",
+      "house_edge_percent_6dp": "3.019231"
+    },
+    {
+      "setting": "keno/Low/3",
+      "risk": "Low",
+      "picks": 3,
+      "multipliers": [
+        "0",
+        "1.06",
+        "1.37",
+        "26"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:16",
+      "rtp_fraction": "19161/19760",
+      "rtp_percent_6dp": "96.968623",
+      "house_edge_percent_6dp": "3.031377"
+    },
+    {
+      "setting": "keno/Low/4",
+      "risk": "Low",
+      "picks": 4,
+      "multipliers": [
+        "0",
+        "0",
+        "2.11",
+        "7.9",
+        "90"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:17",
+      "rtp_fraction": "354573/365560",
+      "rtp_percent_6dp": "96.994474",
+      "house_edge_percent_6dp": "3.005526"
+    },
+    {
+      "setting": "keno/Low/5",
+      "risk": "Low",
+      "picks": 5,
+      "multipliers": [
+        "0",
+        "0",
+        "1.43",
+        "4.2",
+        "13",
+        "300"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:18",
+      "rtp_fraction": "287/296",
+      "rtp_percent_6dp": "96.959459",
+      "house_edge_percent_6dp": "3.040541"
+    },
+    {
+      "setting": "keno/Low/6",
+      "risk": "Low",
+      "picks": 6,
+      "multipliers": [
+        "0",
+        "0",
+        "1.04",
+        "2",
+        "6.2",
+        "100",
+        "700"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:19",
+      "rtp_fraction": "44361/45695",
+      "rtp_percent_6dp": "97.080643",
+      "house_edge_percent_6dp": "2.919357"
+    },
+    {
+      "setting": "keno/Low/7",
+      "risk": "Low",
+      "picks": 7,
+      "multipliers": [
+        "0",
+        "0",
+        "1.05",
+        "1.59",
+        "3.5",
+        "15",
+        "225",
+        "700"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:20",
+      "rtp_fraction": "2412291/2485808",
+      "rtp_percent_6dp": "97.042531",
+      "house_edge_percent_6dp": "2.957469"
+    },
+    {
+      "setting": "keno/Low/8",
+      "risk": "Low",
+      "picks": 8,
+      "multipliers": [
+        "0",
+        "0",
+        "1.04",
+        "1.5",
+        "2",
+        "5.5",
+        "39",
+        "100",
+        "800"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:21",
+      "rtp_fraction": "1656348/1708993",
+      "rtp_percent_6dp": "96.919531",
+      "house_edge_percent_6dp": "3.080469"
+    },
+    {
+      "setting": "keno/Low/9",
+      "risk": "Low",
+      "picks": 9,
+      "multipliers": [
+        "0",
+        "0",
+        "1.04",
+        "1.3",
+        "1.7",
+        "2.5",
+        "7.5",
+        "50",
+        "250",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:22",
+      "rtp_fraction": "66349033/68359720",
+      "rtp_percent_6dp": "97.058667",
+      "house_edge_percent_6dp": "2.941333"
+    },
+    {
+      "setting": "keno/Low/10",
+      "risk": "Low",
+      "picks": 10,
+      "multipliers": [
+        "0",
+        "0",
+        "1.04",
+        "1.21",
+        "1.29",
+        "1.8",
+        "3.5",
+        "13",
+        "50",
+        "250",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:23",
+      "rtp_fraction": "8225404441/8476605280",
+      "rtp_percent_6dp": "97.036540",
+      "house_edge_percent_6dp": "2.963460"
+    },
+    {
+      "setting": "keno/Medium/1",
+      "risk": "Medium",
+      "picks": 1,
+      "multipliers": [
+        "0.4",
+        "2.68"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:24",
+      "rtp_fraction": "97/100",
+      "rtp_percent_6dp": "97.000000",
+      "house_edge_percent_6dp": "3.000000"
+    },
+    {
+      "setting": "keno/Medium/2",
+      "risk": "Medium",
+      "picks": 2,
+      "multipliers": [
+        "0",
+        "1.75",
+        "5.15"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:25",
+      "rtp_fraction": "1009/1040",
+      "rtp_percent_6dp": "97.019231",
+      "house_edge_percent_6dp": "2.980769"
+    },
+    {
+      "setting": "keno/Medium/3",
+      "risk": "Medium",
+      "picks": 3,
+      "multipliers": [
+        "0",
+        "0",
+        "2.66",
+        "50"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:26",
+      "rtp_fraction": "9591/9880",
+      "rtp_percent_6dp": "97.074899",
+      "house_edge_percent_6dp": "2.925101"
+    },
+    {
+      "setting": "keno/Medium/4",
+      "risk": "Medium",
+      "picks": 4,
+      "multipliers": [
+        "0",
+        "0",
+        "1.62",
+        "10",
+        "100"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:27",
+      "rtp_fraction": "177423/182780",
+      "rtp_percent_6dp": "97.069154",
+      "house_edge_percent_6dp": "2.930846"
+    },
+    {
+      "setting": "keno/Medium/5",
+      "risk": "Medium",
+      "picks": 5,
+      "multipliers": [
+        "0",
+        "0",
+        "1.33",
+        "4",
+        "14",
+        "390"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:28",
+      "rtp_fraction": "70919/73112",
+      "rtp_percent_6dp": "97.000492",
+      "house_edge_percent_6dp": "2.999508"
+    },
+    {
+      "setting": "keno/Medium/6",
+      "risk": "Medium",
+      "picks": 6,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "2.86",
+        "9",
+        "180",
+        "710"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:29",
+      "rtp_fraction": "88701/91390",
+      "rtp_percent_6dp": "97.057665",
+      "house_edge_percent_6dp": "2.942335"
+    },
+    {
+      "setting": "keno/Medium/7",
+      "risk": "Medium",
+      "picks": 7,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "1.89",
+        "7",
+        "30",
+        "400",
+        "800"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:30",
+      "rtp_fraction": "3014709/3107260",
+      "rtp_percent_6dp": "97.021459",
+      "house_edge_percent_6dp": "2.978541"
+    },
+    {
+      "setting": "keno/Medium/8",
+      "risk": "Medium",
+      "picks": 8,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "1.92",
+        "3.98",
+        "11",
+        "67",
+        "400",
+        "900"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:31",
+      "rtp_fraction": "41440973/42724825",
+      "rtp_percent_6dp": "96.995068",
+      "house_edge_percent_6dp": "3.004932"
+    },
+    {
+      "setting": "keno/Medium/9",
+      "risk": "Medium",
+      "picks": 9,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "1.92",
+        "2.51",
+        "5",
+        "15",
+        "100",
+        "500",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:32",
+      "rtp_fraction": "1325724863/1367194400",
+      "rtp_percent_6dp": "96.966815",
+      "house_edge_percent_6dp": "3.033185"
+    },
+    {
+      "setting": "keno/Medium/10",
+      "risk": "Medium",
+      "picks": 10,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "1.53",
+        "2",
+        "4",
+        "7",
+        "26",
+        "100",
+        "500",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:33",
+      "rtp_fraction": "410932739/423830264",
+      "rtp_percent_6dp": "96.956913",
+      "house_edge_percent_6dp": "3.043087"
+    },
+    {
+      "setting": "keno/High/1",
+      "risk": "High",
+      "picks": 1,
+      "multipliers": [
+        "0",
+        "3.88"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:34",
+      "rtp_fraction": "97/100",
+      "rtp_percent_6dp": "97.000000",
+      "house_edge_percent_6dp": "3.000000"
+    },
+    {
+      "setting": "keno/High/2",
+      "risk": "High",
+      "picks": 2,
+      "multipliers": [
+        "0",
+        "0",
+        "16.82"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:35",
+      "rtp_fraction": "2523/2600",
+      "rtp_percent_6dp": "97.038462",
+      "house_edge_percent_6dp": "2.961538"
+    },
+    {
+      "setting": "keno/High/3",
+      "risk": "High",
+      "picks": 3,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "79.9"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:36",
+      "rtp_fraction": "2397/2470",
+      "rtp_percent_6dp": "97.044534",
+      "house_edge_percent_6dp": "2.955466"
+    },
+    {
+      "setting": "keno/High/4",
+      "risk": "High",
+      "picks": 4,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "9.51",
+        "259"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:37",
+      "rtp_fraction": "44313/45695",
+      "rtp_percent_6dp": "96.975599",
+      "house_edge_percent_6dp": "3.024401"
+    },
+    {
+      "setting": "keno/High/5",
+      "risk": "High",
+      "picks": 5,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "4.26",
+        "48",
+        "450"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:38",
+      "rtp_fraction": "933/962",
+      "rtp_percent_6dp": "96.985447",
+      "house_edge_percent_6dp": "3.014553"
+    },
+    {
+      "setting": "keno/High/6",
+      "risk": "High",
+      "picks": 6,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "10.2",
+        "350",
+        "710"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:39",
+      "rtp_fraction": "17747/18278",
+      "rtp_percent_6dp": "97.094868",
+      "house_edge_percent_6dp": "2.905132"
+    },
+    {
+      "setting": "keno/High/7",
+      "risk": "High",
+      "picks": 7,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "6.58",
+        "90",
+        "400",
+        "800"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:40",
+      "rtp_fraction": "1507659/1553630",
+      "rtp_percent_6dp": "97.041059",
+      "house_edge_percent_6dp": "2.958941"
+    },
+    {
+      "setting": "keno/High/8",
+      "risk": "High",
+      "picks": 8,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "4.75",
+        "20",
+        "270",
+        "600",
+        "900"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:41",
+      "rtp_fraction": "3318395/3417986",
+      "rtp_percent_6dp": "97.086267",
+      "house_edge_percent_6dp": "2.913733"
+    },
+    {
+      "setting": "keno/High/9",
+      "risk": "High",
+      "picks": 9,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "3.82",
+        "11",
+        "56",
+        "500",
+        "800",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:42",
+      "rtp_fraction": "1629119/1679600",
+      "rtp_percent_6dp": "96.994463",
+      "house_edge_percent_6dp": "3.005537"
+    },
+    {
+      "setting": "keno/High/10",
+      "risk": "High",
+      "picks": 10,
+      "multipliers": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "3.37",
+        "8",
+        "13",
+        "63",
+        "500",
+        "800",
+        "1000"
+      ],
+      "table_ref": "raw/configurations/keno-paytables-2026-11-24.txt:43",
+      "rtp_fraction": "1646088827/1695321056",
+      "rtp_percent_6dp": "97.095994",
+      "house_edge_percent_6dp": "2.904006"
+    }
+  ],
+  "summary": {
+    "plinko": {
+      "tables": 27,
+      "min_percent_6dp": "96.901245",
+      "max_percent_6dp": "97.109375",
+      "tables_at_or_above_99_percent": 0
+    },
+    "keno": {
+      "tables": 40,
+      "min_percent_6dp": "96.919531",
+      "max_percent_6dp": "97.095994",
+      "tables_at_or_above_99_percent": 0
+    },
+    "examples": {
+      "keno_classic_1_pick": {
+        "probabilities": {
+          "miss": "30/40",
+          "hit": "10/40"
+        },
+        "multipliers": {
+          "miss": "0",
+          "hit": "3.88"
+        },
+        "rtp_percent": "97.000000",
+        "hit_multiplier_for_99_percent_with_zero_on_miss": "3.96"
+      },
+      "keno_low_1_pick": {
+        "multipliers": {
+          "miss": "0.7",
+          "hit": "1.78"
+        },
+        "rtp_percent": "97.000000"
+      },
+      "plinko_low_8_rows": {
+        "coefficients": [
+          "5.5",
+          "1.8",
+          "1.1",
+          "1",
+          "0.5",
+          "1",
+          "1.1",
+          "1.8",
+          "5.5"
+        ],
+        "rtp_percent_exact": "97.03125"
+      },
+      "plinko_medium_8_rows": {
+        "coefficients": [
+          "14",
+          "3.2",
+          "1.2",
+          "0.6",
+          "0.5",
+          "0.6",
+          "1.2",
+          "3.2",
+          "14"
+        ],
+        "rtp_percent_exact": "97.109375"
+      }
+    }
+  }
+}

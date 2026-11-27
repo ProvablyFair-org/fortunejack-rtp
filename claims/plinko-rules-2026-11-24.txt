@@ -1,0 +1,7 @@
+# Plinko in-game "Game rules" panel, prod02.orbitalgaming.com/fj/plinko/ (FortuneJack, logged in), read 24 Nov 2026 ~21:25 UTC. Game version: 1.0
+Drop a ball from the top of the pyramid. It bounces off the pins and lands in a slot at the bottom - you win your bet × that slot's multiplier. Edge slots pay the most, center slots the least.
+Difficulty: Low, Medium or High. Higher risk means bigger multipliers on the edges but lower payouts in the center.
+Rows: Choose 8 to 16 rows. More rows mean more pins and a wider range of multipliers.
+Every drop is provably fair and can be verified. House edge: 1%.
+Each drop is settled instantly. Max win per bet:   [no figure shown]
+How to Verify: Every result can be verified using the server seed, client seed and nonce. The HMAC-SHA512 algorithm ensures each outcome is random and can't be altered.

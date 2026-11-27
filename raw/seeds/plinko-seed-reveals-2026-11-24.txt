@@ -1,0 +1,6 @@
+# Plinko message 119 replies after seed changes, 24 Nov 2026 UTC (FortuneJack Plinko, test account)
+# fields: new_hash, new_client_seed, new_nonce, previous_server_seed (revealed), previous_hash, previous_client_seed, previous_total_counters, next_hash
+# line 1: reveal of pair 2202f420 at 22:27:22 UTC (also in raw/events/plinko-main-run-2026-11-24.ndjson)
+# line 2: reveal of pair 58c73952 at ~23:51 UTC (transcribed from the game tab; not in raw/events)
+119,58c73952bfe8370704e0c36570283616d9f142c22118d00b211e5de8ac497adc,pfplinko20261124b,0,51c10638a22ae573a0328afbc41960a0a75a6dba29591d958d7f8729926ec632,2202f420822a084a54d9fe0cdffbfde4604adcadd329f3eea90d56dfa4b59be2,31bf94019cd0a9ae7559ddd8d07b2fa1ebd20b3f5dd7aec96af24bf928c41b9d,1752,873d8f07ad4044690dfa490c84f2172279e6942881383db9779f7c6bd75a2baf
+119,873d8f07ad4044690dfa490c84f2172279e6942881383db9779f7c6bd75a2baf,pfplinko20261124c,0,8efafcd607e8932e731a691417757e64778e0e03f21a08dde518702c76c812f6,58c73952bfe8370704e0c36570283616d9f142c22118d00b211e5de8ac497adc,pfplinko20261124b,176,043966b23d46315bf259c33c34b1e7c66146dbec266b25a66041a10f18e486d4

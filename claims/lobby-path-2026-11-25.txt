@@ -1,0 +1,5 @@
+# FortuneJack lobby -> game, read logged in 25 Nov 2026 ~01:20 UTC
+https://fortunejack.com/crypto-casino/providers/originals lists 10 "FortuneJack Originals": origin.dice origin.limbo origin.baccarat origin.soccer origin.plinko origin.wheel origin.mines origin.keno origin.hi-lo origin.crash
+https://fortunejack.com/game/origin.plinko -> game frame https://prod02.orbitalgaming.com/fj/plinko/  (the game opened top-level for every recorded round)
+https://fortunejack.com/game/origin.keno   -> game frame https://prod02.orbitalgaming.com/fj/keno/
+Screenshots: lobby-originals-2026-11-25.jpg, lobby-plinko-in-fortunejack-2026-11-25.jpg (Low/8 table 5.5 1.8 1.1 1 0.5 1 1.1 1.8 5.5 on screen), lobby-keno-in-fortunejack-2026-11-25.jpg

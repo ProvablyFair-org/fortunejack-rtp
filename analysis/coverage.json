@@ -1,0 +1,1520 @@
+{
+  "note": "Configuration coverage (a table was captured for the setting) is separate from observed payout coverage (which slots or hit counts actually occurred in recorded rounds). All settings sampled does not mean every payout was tested.",
+  "plinko": [
+    {
+      "setting": "plinko/Low/8",
+      "configuration_available": true,
+      "recorded_rounds": 42,
+      "replayable_rounds": 42,
+      "replay_matched": 42,
+      "commitment_recorded_before_round": 42,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 42,
+      "balance_move_matched": 41,
+      "in_wallet_session_with_matching_totals": 42,
+      "mismatches": 0,
+      "unverifiable": 1,
+      "slots_in_table": 9,
+      "observed_slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "observed_slot_count": 7
+    },
+    {
+      "setting": "plinko/Low/9",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 10,
+      "observed_slots": [
+        3,
+        5
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/Low/10",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 11,
+      "observed_slots": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Low/11",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 12,
+      "observed_slots": [
+        3,
+        5,
+        6,
+        8
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Low/12",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 13,
+      "observed_slots": [
+        5,
+        8,
+        9
+      ],
+      "observed_slot_count": 3
+    },
+    {
+      "setting": "plinko/Low/13",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 14,
+      "observed_slots": [
+        3,
+        5,
+        8,
+        9
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Low/14",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 15,
+      "observed_slots": [
+        5,
+        7,
+        9,
+        10
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Low/15",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 16,
+      "observed_slots": [
+        7,
+        10
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/Low/16",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 17,
+      "observed_slots": [
+        4,
+        8,
+        9,
+        10
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Medium/8",
+      "configuration_available": true,
+      "recorded_rounds": 40,
+      "replayable_rounds": 40,
+      "replay_matched": 40,
+      "commitment_recorded_before_round": 40,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 40,
+      "balance_move_matched": 40,
+      "in_wallet_session_with_matching_totals": 40,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 9,
+      "observed_slots": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "observed_slot_count": 7
+    },
+    {
+      "setting": "plinko/Medium/9",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 10,
+      "observed_slots": [
+        2,
+        3,
+        6,
+        7
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Medium/10",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 11,
+      "observed_slots": [
+        3,
+        5,
+        6
+      ],
+      "observed_slot_count": 3
+    },
+    {
+      "setting": "plinko/Medium/11",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 12,
+      "observed_slots": [
+        5,
+        6
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/Medium/12",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 13,
+      "observed_slots": [
+        3,
+        6,
+        7,
+        8
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Medium/13",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 14,
+      "observed_slots": [
+        5,
+        6,
+        8,
+        9
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/Medium/14",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 15,
+      "observed_slots": [
+        5,
+        6,
+        8
+      ],
+      "observed_slot_count": 3
+    },
+    {
+      "setting": "plinko/Medium/15",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 16,
+      "observed_slots": [
+        3,
+        6,
+        9
+      ],
+      "observed_slot_count": 3
+    },
+    {
+      "setting": "plinko/Medium/16",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 17,
+      "observed_slots": [
+        5,
+        9,
+        10,
+        11
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/High/8",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 9,
+      "observed_slots": [
+        2,
+        4,
+        5
+      ],
+      "observed_slot_count": 3
+    },
+    {
+      "setting": "plinko/High/9",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 10,
+      "observed_slots": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/High/10",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 11,
+      "observed_slots": [
+        4,
+        5,
+        7
+      ],
+      "observed_slot_count": 3
+    },
+    {
+      "setting": "plinko/High/11",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 12,
+      "observed_slots": [
+        4,
+        7
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/High/12",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 13,
+      "observed_slots": [
+        5,
+        9
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/High/13",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 14,
+      "observed_slots": [
+        4,
+        6
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/High/14",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 15,
+      "observed_slots": [
+        5,
+        6,
+        7,
+        9
+      ],
+      "observed_slot_count": 4
+    },
+    {
+      "setting": "plinko/High/15",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 16,
+      "observed_slots": [
+        8,
+        9
+      ],
+      "observed_slot_count": 2
+    },
+    {
+      "setting": "plinko/High/16",
+      "configuration_available": true,
+      "recorded_rounds": 4,
+      "replayable_rounds": 4,
+      "replay_matched": 4,
+      "commitment_recorded_before_round": 4,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 4,
+      "balance_move_matched": 4,
+      "in_wallet_session_with_matching_totals": 4,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "slots_in_table": 17,
+      "observed_slots": [
+        6,
+        8,
+        10
+      ],
+      "observed_slot_count": 3
+    }
+  ],
+  "keno": [
+    {
+      "setting": "keno/Classic/1",
+      "configuration_available": true,
+      "recorded_rounds": 35,
+      "replayable_rounds": 35,
+      "replay_matched": 35,
+      "commitment_recorded_before_round": 12,
+      "commitment_after_rounds_only": 23,
+      "settlement_matched": 35,
+      "balance_move_matched": 35,
+      "in_wallet_session_with_matching_totals": 35,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 2,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": [
+        1
+      ]
+    },
+    {
+      "setting": "keno/Classic/2",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 3,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": [
+        1
+      ]
+    },
+    {
+      "setting": "keno/Classic/3",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 4,
+      "observed_hit_counts": [
+        0
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/Classic/4",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 5,
+      "observed_hit_counts": [
+        0,
+        2
+      ],
+      "observed_paid_classes": [
+        2
+      ]
+    },
+    {
+      "setting": "keno/Classic/5",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 6,
+      "observed_hit_counts": [
+        0,
+        1,
+        2
+      ],
+      "observed_paid_classes": [
+        1,
+        2
+      ]
+    },
+    {
+      "setting": "keno/Classic/6",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 7,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Classic/7",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 8,
+      "observed_hit_counts": [
+        2,
+        3
+      ],
+      "observed_paid_classes": [
+        2,
+        3
+      ]
+    },
+    {
+      "setting": "keno/Classic/8",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 9,
+      "observed_hit_counts": [
+        0,
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Classic/9",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 10,
+      "observed_hit_counts": [
+        1,
+        2
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/Classic/10",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 11,
+      "observed_hit_counts": [
+        2,
+        4
+      ],
+      "observed_paid_classes": [
+        4
+      ]
+    },
+    {
+      "setting": "keno/Low/1",
+      "configuration_available": true,
+      "recorded_rounds": 33,
+      "replayable_rounds": 33,
+      "replay_matched": 33,
+      "commitment_recorded_before_round": 10,
+      "commitment_after_rounds_only": 23,
+      "settlement_matched": 33,
+      "balance_move_matched": 33,
+      "in_wallet_session_with_matching_totals": 33,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 2,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": [
+        0,
+        1
+      ]
+    },
+    {
+      "setting": "keno/Low/2",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 3,
+      "observed_hit_counts": [
+        1,
+        2
+      ],
+      "observed_paid_classes": [
+        1,
+        2
+      ]
+    },
+    {
+      "setting": "keno/Low/3",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 4,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": [
+        1
+      ]
+    },
+    {
+      "setting": "keno/Low/4",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 5,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/Low/5",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 6,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Low/6",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 7,
+      "observed_hit_counts": [
+        1,
+        2
+      ],
+      "observed_paid_classes": [
+        2
+      ]
+    },
+    {
+      "setting": "keno/Low/7",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 8,
+      "observed_hit_counts": [
+        0,
+        1,
+        2
+      ],
+      "observed_paid_classes": [
+        2
+      ]
+    },
+    {
+      "setting": "keno/Low/8",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 9,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Low/9",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 10,
+      "observed_hit_counts": [
+        2,
+        4
+      ],
+      "observed_paid_classes": [
+        2,
+        4
+      ]
+    },
+    {
+      "setting": "keno/Low/10",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 11,
+      "observed_hit_counts": [
+        2,
+        3
+      ],
+      "observed_paid_classes": [
+        2,
+        3
+      ]
+    },
+    {
+      "setting": "keno/Medium/1",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 2,
+      "observed_hit_counts": [
+        0
+      ],
+      "observed_paid_classes": [
+        0
+      ]
+    },
+    {
+      "setting": "keno/Medium/2",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 3,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": [
+        1
+      ]
+    },
+    {
+      "setting": "keno/Medium/3",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 4,
+      "observed_hit_counts": [
+        0,
+        2
+      ],
+      "observed_paid_classes": [
+        2
+      ]
+    },
+    {
+      "setting": "keno/Medium/4",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 5,
+      "observed_hit_counts": [
+        0,
+        1
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/Medium/5",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 6,
+      "observed_hit_counts": [
+        1,
+        2,
+        3
+      ],
+      "observed_paid_classes": [
+        2,
+        3
+      ]
+    },
+    {
+      "setting": "keno/Medium/6",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 7,
+      "observed_hit_counts": [
+        0,
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Medium/7",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 8,
+      "observed_hit_counts": [
+        1,
+        2,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Medium/8",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 9,
+      "observed_hit_counts": [
+        1,
+        2,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/Medium/9",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 2,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 1,
+      "unverifiable": 0,
+      "payout_classes_in_table": 10,
+      "observed_hit_counts": [
+        1,
+        2,
+        4
+      ],
+      "observed_paid_classes": [
+        4
+      ]
+    },
+    {
+      "setting": "keno/Medium/10",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 11,
+      "observed_hit_counts": [
+        1,
+        2,
+        4
+      ],
+      "observed_paid_classes": [
+        4
+      ]
+    },
+    {
+      "setting": "keno/High/1",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 2,
+      "observed_hit_counts": [
+        0
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/High/2",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 3,
+      "observed_hit_counts": [
+        0
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/High/3",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 4,
+      "observed_hit_counts": [
+        0,
+        2
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/High/4",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 5,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/High/5",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 6,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": [
+        3
+      ]
+    },
+    {
+      "setting": "keno/High/6",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 7,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/High/7",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 8,
+      "observed_hit_counts": [
+        2
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/High/8",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 9,
+      "observed_hit_counts": [
+        1,
+        2,
+        3
+      ],
+      "observed_paid_classes": []
+    },
+    {
+      "setting": "keno/High/9",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 10,
+      "observed_hit_counts": [
+        1,
+        2,
+        4
+      ],
+      "observed_paid_classes": [
+        4
+      ]
+    },
+    {
+      "setting": "keno/High/10",
+      "configuration_available": true,
+      "recorded_rounds": 3,
+      "replayable_rounds": 3,
+      "replay_matched": 3,
+      "commitment_recorded_before_round": 0,
+      "commitment_after_rounds_only": 3,
+      "settlement_matched": 3,
+      "balance_move_matched": 3,
+      "in_wallet_session_with_matching_totals": 3,
+      "mismatches": 0,
+      "unverifiable": 0,
+      "payout_classes_in_table": 11,
+      "observed_hit_counts": [
+        1,
+        3
+      ],
+      "observed_paid_classes": []
+    }
+  ],
+  "totals": {
+    "plinko": {
+      "settings_with_configuration": 27,
+      "settings_with_recorded_rounds": 27,
+      "recorded_rounds": 182,
+      "replayable_rounds": 182,
+      "replay_matched": 182,
+      "commitment_recorded_before_round": 182,
+      "commitment_after_rounds_only": 0,
+      "settlement_matched": 182,
+      "balance_move_matched": 181,
+      "in_wallet_session_with_matching_totals": 182,
+      "mismatches": 0,
+      "unverifiable": 1,
+      "slots_in_all_tables": 351,
+      "slots_observed": 93
+    },
+    "keno": {
+      "settings_with_configuration": 40,
+      "settings_with_recorded_rounds": 40,
+      "recorded_rounds": 182,
+      "replayable_rounds": 182,
+      "replay_matched": 182,
+      "commitment_recorded_before_round": 22,
+      "commitment_after_rounds_only": 160,
+      "settlement_matched": 181,
+      "balance_move_matched": 182,
+      "in_wallet_session_with_matching_totals": 182,
+      "mismatches": 1,
+      "unverifiable": 0,
+      "payout_classes_in_all_tables": 260,
+      "hit_counts_observed": 86
+    },
+    "unrecorded_test_rounds": {
+      "wallet_sessions": [
+        {
+          "game": "keno",
+          "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:10",
+          "bet": "0.5",
+          "won": "0.753"
+        },
+        {
+          "game": "plinko",
+          "wallet_ref": "raw/wallet-transactions-2026-11-24.txt:11",
+          "bet": "0.5",
+          "won": "0.47"
+        }
+      ],
+      "note": "stakes of 0.1 per round: 5 Plinko and 5 Keno rounds, outcomes not recorded"
+    }
+  },
+  "focused": {
+    "keno/Classic/1": {
+      "rounds": 35,
+      "paid_hits": 9,
+      "misses": 26
+    },
+    "keno/Low/1": {
+      "rounds": 33,
+      "hits": 7,
+      "misses_paid_0_7": 26
+    }
+  }
+}

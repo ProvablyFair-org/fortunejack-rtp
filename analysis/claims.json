@@ -1,0 +1,56 @@
+{
+  "note": "Each entry is located in a captured file of this package: the blog page fetched logged out (text extracted from the saved html) and the public game clients fetched logged out. found = true means the exact text is present.",
+  "entries": [
+    {
+      "claim": "The FortuneJack blog lists Plinko and Keno among the titles on a 99% theoretical RTP",
+      "source": "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.txt",
+      "line": 50,
+      "quote": "Dice, Mines, Plinko, Crash, Keno, Limbo, Hi-Lo, and Baccarat run on a 99% theoretical RTP.",
+      "found": true
+    },
+    {
+      "claim": "The blog equates 99% RTP with a 1% house edge",
+      "source": "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.txt",
+      "line": 16,
+      "quote": "A 99% RTP corresponds to a 1% theoretical house edge.",
+      "found": true
+    },
+    {
+      "claim": "The blog's own example: $10,000 in stakes, about $100 kept",
+      "source": "claims/blog_fortunejack-originals-explore-99-rtp-games-you-can-verify.txt",
+      "line": 16,
+      "quote": "$10,000 in total stakes, the mathematical model retains approximately $100",
+      "found": true
+    },
+    {
+      "claim": "The Plinko game rules state a 1% house edge (rules text in the public client)",
+      "source": "raw/client/plinko/assets/index-BvX_ma61.js",
+      "line": 171,
+      "quote": "Every drop is provably fair and can be verified. House edge: 1%.",
+      "found": true
+    },
+    {
+      "claim": "The Keno game rules state no RTP or house-edge figure (rules text in the public client)",
+      "source": "raw/client/keno/assets/index-CbS1RIor.js",
+      "rule_lines": 14,
+      "rule_lines_with_a_return_figure": [],
+      "found": true
+    },
+    {
+      "claim": "The FortuneJack Plinko game links this public verifier",
+      "source": "raw/client/plinko/assets/index-BvX_ma61.js",
+      "game_id": "fj.plinko",
+      "verifier_url": "https://codepen.io/Orbital-Maintenance/full/WbpZpZE",
+      "found": true,
+      "note": "set by the game's own configuration (gameId fj.plinko), which replaces the default verifier link in the shared client code at startup"
+    },
+    {
+      "claim": "The FortuneJack Keno game links this public verifier",
+      "source": "raw/client/keno/assets/index-CbS1RIor.js",
+      "game_id": "fj.keno",
+      "verifier_url": "https://codepen.io/Orbital-Maintenance/full/vExexeO",
+      "found": true,
+      "note": "set by the game's own configuration (gameId fj.keno), which replaces the default verifier link in the shared client code at startup"
+    }
+  ]
+}
