@@ -233,9 +233,9 @@ function parsePlinkoEvents(file) {
       const i = ev.indexOf(e);
       const prev = ev.slice(0, i).reverse().find((x) => x.dir === 'sent');
       const next = ev[i + 1];
-      exceptions.push({ check: 'unexplained_server_message', game: 'plinko', round_id: null, observed: s,
+      exceptions.push({ check: 'server_error_message', game: 'plinko', round_id: null, observed: s,
         context: { previous_sent: prev ? { ref: prev._ref, raw: strip(prev.s) } : null, next_event: next ? { ref: next._ref, dir: next.dir, raw: strip(next.s) } : null },
-        status: 'unresolved', reason: 'message type 90 is not documented in any file of this package; no paid round sits between the previous and next recorded round of this message', source_refs: [e._ref] });
+        status: 'noted', reason: 'message 90 is the game\'s error message; the Plinko client names error code 1 CONCURRENT_CONNECTION and code 7 PF_NOT_SET (raw/client/plinko/assets/index-BvX_ma61.js); no paid round sits between the previous and next recorded round of this message', source_refs: [e._ref] });
     }
   }
   if (sent.length) throw new Error('64 without 65 in ' + file);
@@ -649,9 +649,27 @@ function noPayoutTable(claim, file) {
   const arrays = [...js.matchAll(/\[\s*-?\d+(\.\d+)?(\s*,\s*-?\d+(\.\d+)?){3,}\s*\]/g)].length;
   return { claim, source: file, numeric_arrays_of_four_or_more: arrays, found: arrays === 0 && !/COEFF|PAYTABLE|PAYOUT|MULTIPLIER/i.test(js) };
 }
+// The verifiers turn a value into an integer with parseInt(max * value) (their nextInt); the replay
+// uses Math.floor. The two differ only when max * value is below 0.000001: JavaScript then writes the
+// number in exponent form (7e-7) and parseInt reads its first digit (7).
+function verifierOutcome(r, s) {
+  const vInt = (max, counter) => parseInt(max * unit(s.revealed_server_seed, s.client_seed, counter));
+  if (r.game === 'plinko') {
+    let slot = 0;
+    for (let i = 0; i < r.rows; i++) slot += vInt(2, r.counter_interval[0] + i);
+    return String(slot);
+  }
+  const balls = [];
+  for (let n = 1; n <= 40; n++) balls.push(n);
+  for (let i = 0; i < 39; i++) {
+    const j = i + vInt(40 - i, r.counter_interval[0] + i);
+    const t = balls[j]; balls[j] = balls[i]; balls[i] = t;
+  }
+  return balls.slice(0, 10).sort((a, b) => a - b).join(',');
+}
 function sameConstruction(claim) {
   const both = ['crypto.subtle.importKey("raw", enc.encode(seeds.serverSeed), { name: "HMAC", hash: "SHA-512" }', 'enc.encode(seeds.clientSeed + "-" + n)',
-    'Number("0x" + hash.substring(0, 16)) / Number("0xffffffffffffffff")'];
+    'Number("0x" + hash.substring(0, 16)) / Number("0xffffffffffffffff")', 'return parseInt(max * nextDouble(serverSeed, clientSeed, nonce));'];
   const plinko = ['slot += nextInt(2, serverSeed, clientSeed, startNonce + i)'];
   const keno = ['const NONCES_PER_ROUND = 40;', 'const j = i + nextInt(balls.length - i, serverSeed, clientSeed, nonce);', 'return balls.slice(0, 10)'];
   const p = readText(PLINKO_VERIFIER), k = readText(KENO_VERIFIER);
@@ -659,7 +677,22 @@ function sameConstruction(claim) {
   for (const s of both) { if (!p.includes(s)) missing.push('plinko: ' + s); if (!k.includes(s)) missing.push('keno: ' + s); }
   for (const s of plinko) if (!p.includes(s)) missing.push('plinko: ' + s);
   for (const s of keno) if (!k.includes(s)) missing.push('keno: ' + s);
-  return { claim, sources: [PLINKO_VERIFIER, KENO_VERIFIER], code_checked: { both, plinko, keno }, missing, found: missing.length === 0 };
+  let agree = 0;
+  for (const r of rounds) {
+    const replayed = r.game === 'plinko' ? String(r.replayed_slot) : r.replayed_draw.slice().sort((a, b) => a - b).join(',');
+    if (verifierOutcome(r, seedById[r.seed_ref]) === replayed) agree++;
+  }
+  return { claim, sources: [PLINKO_VERIFIER, KENO_VERIFIER], code_checked: { both, plinko, keno }, missing,
+    rounding: 'the verifiers round with parseInt(), the replay with Math.floor(); they differ only when the scaled value is below 0.000001, which JavaScript writes in exponent form (7e-7 is read as 7)',
+    recorded_rounds: rounds.length, rounds_where_the_verifier_gives_the_replayed_outcome: agree,
+    found: missing.length === 0 && agree === rounds.length };
+}
+function clientErrorCodes(claim) {
+  const needed = ['e.ERROR="90"', '90:{parts_length:1,data:[{name:"errorCode",type:"int"}]}',
+    'e[e.CONCURRENT_CONNECTION=1]="CONCURRENT_CONNECTION"', 'e[e.PF_NOT_SET=7]="PF_NOT_SET"'];
+  const js = readText(PLINKO_JS);
+  const missing = needed.filter((x) => !js.includes(x));
+  return { claim, source: PLINKO_JS, code_checked: needed, missing, found: missing.length === 0 };
 }
 function penDates(claim) {
   const p = JSON.parse(readText(PEN_META)).pens.find((x) => x.id === 'WbpZpZE');
@@ -683,8 +716,9 @@ const claims = {
     verifierLink('The FortuneJack Keno game links this public verifier', KENO_JS, 'fj.keno'),
     verifierTables('The Plinko verifier the game links holds the same 27 payout tables as the live game'),
     noPayoutTable('The Keno verifier the game links holds no payout table', KENO_VERIFIER),
-    sameConstruction('Both verifiers compute outcomes the way the replay in this package does'),
+    sameConstruction('Both verifiers use the replay\'s seeds, message and counters, and give the replayed outcome for every recorded round'),
     penDates('CodePen lists the Plinko verifier as created and last updated on 2 October 2026'),
+    clientErrorCodes('The Plinko client names server message 90 ERROR, error code 1 CONCURRENT_CONNECTION and error code 7 PF_NOT_SET'),
   ],
 };
 

@@ -5,14 +5,16 @@ A second implementation, written separately from scripts/check.js and sharing no
 It reads raw/ only. It recomputes the RTP of every payout table with exact fractions, checks each
 revealed server seed against its committed hash, replays every recorded round from the revealed
 seeds, checks each multiplier and gross payout against the captured tables, checks every balance
-move and the wallet session totals, compares the Plinko verifier's tables with the live tables, and
-verifies SHA256SUMS.txt and raw/client/SHA256SUMS.txt.
+move and the wallet session totals, compares the Plinko verifier's tables with the live tables,
+checks that the saved verifiers' rounding gives the replayed outcome for every round, and verifies
+SHA256SUMS.txt and raw/client/SHA256SUMS.txt.
 It then compares its RTP fractions with analysis/theoretical-rtp.json, written by scripts/check.js.
 
     python3 scripts/independent_check.py
 
 Python 3.8 or later, standard library only. Exit code 0 when every hash and commitment matches,
-every outcome and multiplier replays, every balance move matches, and both implementations agree.
+every outcome and multiplier replays, every balance move matches, the only payout exception is the
+one listed in README section 5, and both implementations agree.
 """
 import hashlib
 import hmac
@@ -193,21 +195,47 @@ def keno_draw(p, first):
     return a[:10]
 
 
+def js_parse_int(x):
+    # JavaScript parseInt(x) for a number x >= 0, as the saved verifiers use it: String(x) is in
+    # exponent form below 0.000001 ("7e-7"), and parseInt then reads its first digit.
+    if 0 < x < 1e-6:
+        return int(repr(x)[0])
+    return math.floor(x)
+
+
+def verifier_outcome(game, p, first, rows):
+    # the saved CodePen verifiers' own outcome: Plinko slot, or the ten Keno numbers sorted
+    if game == 'plinko':
+        return sum(js_parse_int(2 * unit(p['server'], p['client'], first + i)) for i in range(rows))
+    a = list(range(1, 41))
+    for i in range(39):
+        j = i + js_parse_int((40 - i) * unit(p['server'], p['client'], first + i))
+        if j > 39:
+            return None
+        a[i], a[j] = a[j], a[i]
+    return sorted(a[:10])
+
+
+KNOWN_PAYOUT_EXCEPTIONS = ['keno round 1795559705745017: stake x multiplier = 0.25100000, credited 0.25099999']
 counter = {pair: base for pair, (base, _) in bases.items()}
 stats = {g: dict(rounds=0, outcome=0, multiplier=0, payout=0) for g in ('plinko', 'keno')}
 payout_exceptions = []
+verifier_same = 0
 observed = set()
 for r in rounds:  # logs are in time order within each pair
     p, st = PAIRS[r['pair']], stats[r['game']]
     st['rounds'] += 1
+    first = counter[r['pair']] + 1
     if r['game'] == 'plinko':
-        mine = plinko_path(p, counter[r['pair']] + 1, r['rows'])
+        mine = plinko_path(p, first, r['rows'])
+        verifier_same += verifier_outcome('plinko', p, first, r['rows']) == mine.count('1')
         counter[r['pair']] += r['rows']
         table_mult = PLINKO[(r['risk'], r['rows'])][r['path'].count('1')]
         observed.add(('plinko', r['risk'], r['rows'], r['path'].count('1')))
         ok_outcome = mine == r['path']
     else:
-        mine = keno_draw(p, counter[r['pair']] + 1)
+        mine = keno_draw(p, first)
+        verifier_same += verifier_outcome('keno', p, first, 0) == sorted(mine)
         counter[r['pair']] += 40
         hits = len(set(r['selected']) & set(mine))
         table_mult = KENO[(r['risk'], len(r['selected']))][hits]
@@ -220,6 +248,8 @@ for r in rounds:  # logs are in time order within each pair
         st['payout'] += 1
     else:
         payout_exceptions.append('%s round %s: stake x multiplier = %s, credited %s' % (r['game'], r['id'], expected_payout, r['payout']))
+expect(payout_exceptions == KNOWN_PAYOUT_EXCEPTIONS, 'payout exceptions differ from the one listed in README section 5')
+expect(verifier_same == len(rounds), "the saved verifiers' rounding gives a different outcome on a recorded round")
 
 counters_ok = 0
 for pair, p in PAIRS.items():
@@ -327,6 +357,7 @@ out('SHA256SUMS.txt: %d/%d files match, %d files not listed; raw/client/SHA256SU
     % (len(sums) - len(hash_bad), len(sums), len(unlisted), len(client_sums) - len(client_bad), len(client_sums)))
 out('plinko verifier saved from CodePen: %d/%d tables and %d/%d entries equal the live tables'
     % (ver_match, ver_tables, ver_entries_match, ver_entries))
+out("saved verifiers' rounding (parseInt): the replayed outcome on %d/%d rounds" % (verifier_same, len(rounds)))
 out('agreement with scripts/check.js: %d/%d table RTPs identical as exact fractions' % (agree, compared))
 for p in problems:
     out('PROBLEM ' + p)

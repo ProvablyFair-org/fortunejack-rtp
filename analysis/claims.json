@@ -70,7 +70,7 @@
       "found": true
     },
     {
-      "claim": "Both verifiers compute outcomes the way the replay in this package does",
+      "claim": "Both verifiers use the replay's seeds, message and counters, and give the replayed outcome for every recorded round",
       "sources": [
         "raw/verifier/plinko-WbpZpZE.js",
         "raw/verifier/keno-vExexeO.js"
@@ -79,7 +79,8 @@
         "both": [
           "crypto.subtle.importKey(\"raw\", enc.encode(seeds.serverSeed), { name: \"HMAC\", hash: \"SHA-512\" }",
           "enc.encode(seeds.clientSeed + \"-\" + n)",
-          "Number(\"0x\" + hash.substring(0, 16)) / Number(\"0xffffffffffffffff\")"
+          "Number(\"0x\" + hash.substring(0, 16)) / Number(\"0xffffffffffffffff\")",
+          "return parseInt(max * nextDouble(serverSeed, clientSeed, nonce));"
         ],
         "plinko": [
           "slot += nextInt(2, serverSeed, clientSeed, startNonce + i)"
@@ -91,6 +92,9 @@
         ]
       },
       "missing": [],
+      "rounding": "the verifiers round with parseInt(), the replay with Math.floor(); they differ only when the scaled value is below 0.000001, which JavaScript writes in exponent form (7e-7 is read as 7)",
+      "recorded_rounds": 364,
+      "rounds_where_the_verifier_gives_the_replayed_outcome": 364,
       "found": true
     },
     {
@@ -98,6 +102,18 @@
       "source": "raw/verifier/codepen-metadata-2026-11-27.json",
       "created": "2026-10-02 07:32:34 UTC",
       "updated": "2026-10-02 11:46:21 UTC",
+      "found": true
+    },
+    {
+      "claim": "The Plinko client names server message 90 ERROR, error code 1 CONCURRENT_CONNECTION and error code 7 PF_NOT_SET",
+      "source": "raw/client/plinko/assets/index-BvX_ma61.js",
+      "code_checked": [
+        "e.ERROR=\"90\"",
+        "90:{parts_length:1,data:[{name:\"errorCode\",type:\"int\"}]}",
+        "e[e.CONCURRENT_CONNECTION=1]=\"CONCURRENT_CONNECTION\"",
+        "e[e.PF_NOT_SET=7]=\"PF_NOT_SET\""
+      ],
+      "missing": [],
       "found": true
     }
   ]

@@ -17,7 +17,7 @@ No account, network access or dependencies needed. From this folder:
     python3 scripts/independent_check.py   # Python 3.8+: a separate implementation that replays every round from raw/
     sha256sum -c SHA256SUMS.txt            # every file except the list itself
 
-Both scripts exit 0 only if everything matches. Every figure below cites the file it comes from. All times are UTC.
+Both scripts exit 0 only if every check passes. That includes the one payout exception in section 5: both scripts report it and fail if it is not exactly as listed. Every figure below cites the file it comes from. All times are UTC.
 
 ## 1. What FortuneJack says
 
@@ -91,7 +91,7 @@ Per-setting counts are in `analysis/coverage.json`. The RTP figures do not depen
 All in `analysis/exceptions.ndjson`.
 
 1. **Keno round 1795559705745017** (main run, round 86 of 160, Medium, 9 picks, 4 hits, multiplier 2.51): credited 0.25099999 USDT; stake x multiplier is 0.251 exactly. 0.00000001 short. The cause is not established. The draw, hit count and multiplier match, and the FortuneJack wallet total for that session includes the same amount.
-2. Plinko server message `90,1` was followed by the connection closing; `90,7` followed a client-seed change, which the next message repeated with a different seed. The meaning of message 90 is not documented in this package. No paid round is affected.
+2. Plinko server message `90` is the game's error message. The Plinko client names error code 1 `CONCURRENT_CONNECTION` and code 7 `PF_NOT_SET` (`raw/client/plinko/assets/index-BvX_ma61.js`). `90,1` was followed by the connection closing; `90,7` followed a client-seed change, which the next message repeated with a different seed. No paid round is affected.
 3. Keno server message code 103 ("Another connection") closed the second-set connection after its last bet reply. Every bet on that connection has a reply.
 4. 10 rounds (5 Plinko, 5 Keno) were placed before recording started. They appear in the FortuneJack wallet as totals only and cannot be replayed. They are counted as unverifiable, not as matches.
 
@@ -102,7 +102,7 @@ All in `analysis/exceptions.ndjson`.
 - **Transcribed records.** The 4 Bet-button rounds, the Plinko second-pair reveal and the three Keno reveal replies are transcriptions from the game tab, not raw message logs.
 - **Wallet granularity.** The wallet list gives per-session totals, not per-round transaction ids.
 - **Scope.** One account, one evening, one currency (USDT). The tables are shown to be in effect for that period only, not before or after it, and not for other accounts or currencies.
-- **Verifier.** The game clients contain no verifier code; they link the CodePen verifiers saved in `raw/verifier/`, which use the construction above. The construction is also established by replaying every recorded round. CodePen's created and updated dates are CodePen's own records (`raw/verifier/codepen-metadata-2026-11-27.json`).
+- **Verifier.** The game clients contain no verifier code; they link the CodePen verifiers saved in `raw/verifier/`. These use the replay's seeds, message and counters but round with `parseInt()` where the replay uses `Math.floor()`. The two differ only for a scaled value below 0.000001, which JavaScript writes in exponent form (`parseInt` reads 7e-7 as 7); the saved Plinko verifier can then show an impossible slot, such as 11 on 8 rows. No recorded round is affected: both verifiers give the replayed outcome for all 364 (`analysis/claims.json`). Whether the live server shares this defect is not established. The construction itself is established by replaying every recorded round. CodePen's created and updated dates are CodePen's own records (`raw/verifier/codepen-metadata-2026-11-27.json`).
 - **Model.** The theoretical returns assume the disclosed outcome model. A matched seed commitment does not by itself show how server seeds are chosen.
 
 ## Reproduce
@@ -110,9 +110,9 @@ All in `analysis/exceptions.ndjson`.
     node scripts/check.js
     python3 scripts/independent_check.py
 
-`scripts/check.js` (Node 18 or later, no dependencies) rebuilds `sessions/`, `normalized/` and `analysis/` from `raw/` and `claims/`, replays every round, recomputes every table, locates FortuneJack's claims in the captured files, compares the Plinko verifier's tables with the live ones, and exits 0 only if the result equals the committed files byte for byte and every hash in both hash lists matches.
+`scripts/check.js` (Node 18 or later, no dependencies) rebuilds `sessions/`, `normalized/` and `analysis/` from `raw/` and `claims/`, replays every round, recomputes every table, locates FortuneJack's claims in the captured files, compares the Plinko verifier's tables with the live ones, checks that both verifiers give the replayed outcome for every round, and exits 0 only if the result equals the committed files byte for byte and every hash in both hash lists matches.
 
-`scripts/independent_check.py` (Python 3.8 or later, standard library only) is a separate implementation. It reads `raw/` only, replays every round, recomputes every table, checks the balance moves, wallet totals, hashes and the Plinko verifier's tables, and confirms its 67 RTP fractions equal those in `analysis/theoretical-rtp.json`.
+`scripts/independent_check.py` (Python 3.8 or later, standard library only) is a separate implementation. It reads `raw/` only, replays every round, recomputes every table, checks the balance moves, wallet totals, hashes, the Plinko verifier's tables and the verifiers' `parseInt()` rounding, and confirms its 67 RTP fractions equal those in `analysis/theoretical-rtp.json`. It exits 0 only if all of that holds and the only payout exception is the one in section 5.
 
 ## Files
 
